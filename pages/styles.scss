@@ -2,6 +2,9 @@ $fa-font-path:   "/static/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 @import "../node_modules/bulma/bulma.sass";
 
+body{
+  background-color:$dark;
+}
 body:after{
   content: "alpha";
   position: absolute;
@@ -18,4 +21,10 @@ body:after{
   color: #fff;
   line-height: 27px;
   transform:rotate(45deg);
+}
+
+.bm--card-equal-height {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
 }

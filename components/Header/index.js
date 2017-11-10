@@ -4,25 +4,32 @@ import classNames from 'classnames'
 import { withRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
+import stylesheet from './styles.scss'
+
 const Header = (props) => (
 
-  <header>
-    <nav className='navbar ' role='navigation' aria-label='main navigation'>
-      <div className='navbar-brand'>
-        <Link href='/'>
-          <a className='navbar-item is-size-4'>
-            <strong>Gamers Assembly</strong>
-          </a>
-        </Link>
-      </div>
-      <div className='navbar-menu'>
-        <div className='navbar-start'>
+  <header className='ga-header'>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+    <nav className='navbar is-transparent is-dark'>
+      <div className='container'>
+
+        <div className='navbar-brand'>
           <Link href='/'>
-            <a className={classNames('navbar-item', {'is-active': props.router.pathname === '/'})}>Actualités</a>
+            <a className='navbar-item is-size-4'>
+              <strong>Gamers Assembly</strong>
+            </a>
           </Link>
+        </div>
+        <div className='navbar-menu'>
+          <div className='navbar-start '>
+            <Link href='/news'>
+              <a className={classNames('navbar-item', {'is-active': props.router.pathname === '/news'})}>Actualités</a>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
+
   </header>
 )
 
