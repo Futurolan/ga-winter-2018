@@ -10,7 +10,7 @@ const Header = (props) => (
 
   <header className='ga-header'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <nav className='navbar is-transparent is-dark'>
+    <nav className='navbar is-transparent'>
       <div className='container'>
 
         <div className='navbar-brand'>

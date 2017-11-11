@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bulma": "^0.6.1",
+    "bulma-ribbon": "0.0.1",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.2",
@@ -22,9 +23,11 @@
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-redux": "^5.0.6",
+    "react-redux-loading-bar": "^2.9.3",
     "redux": "^3.7.2",
     "redux-immutable": "^4.0.0",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

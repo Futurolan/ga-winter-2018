@@ -1,4 +1,7 @@
 .hero{
-  background: url('/static/hero.jpg') no-repeat center center;
-  background-size:cover;
+  background-attachment: fixed!important;
+  background-size:cover!important;
+  h1{
+    font-size:5rem;
+  }
 }
