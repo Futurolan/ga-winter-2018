@@ -5,11 +5,11 @@ import { createStructuredSelector } from 'reselect'
 import PropTypes from 'prop-types'
 
 import Layout from 'components/Layout'
-import Hero from 'components/Hero'
+import Hero from 'containers/Hero'
 import NewsBlock from 'components/NewsBlock'
 import InfoBlock from 'components/InfoBlock'
 
-import {makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl} from 'selectors/config'
+import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl} from 'selectors/config'
 import {getConfig} from 'actions/config'
 
 class HomePage extends React.Component {
@@ -18,11 +18,12 @@ class HomePage extends React.Component {
   }
 
   render () {
-    const {heroTitle, heroSubTitle, heroImgUrl} = this.props
+    const {heroDisplay, heroTitle, heroSubTitle, heroImgUrl} = this.props
     return (
       <Layout name='home-page'>
         <div>
-          <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />
+
+          {heroDisplay && <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />}
           <InfoBlock />
           <NewsBlock />
         </div>
@@ -32,11 +33,14 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
+  heroDisplay: PropTypes.bool,
   heroTitle: PropTypes.string,
   heroSubTitle: PropTypes.string,
   heroImgUrl: PropTypes.string
 }
+
 const mapStateToProps = createStructuredSelector({
+  heroDisplay: makeHeroDisplay(),
   heroTitle: makeHeroTitle(),
   heroSubTitle: makeHeroSubTitle(),
   heroImgUrl: makeHeroImgUrl()
