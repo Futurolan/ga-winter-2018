@@ -6,18 +6,18 @@ const initialState = fromJS({
   data: false
 })
 
-function configReducer (state = initialState, action) {
+function homeReducer (state = initialState, action) {
   switch (action.type) {
-    case 'GET_CONFIG_FETCH':
+    case 'GET_HOME_FETCH':
       return state
         .set('loading', true)
         .set('error', false)
         .set('data', false)
-    case 'GET_CONFIG_SUCCESS':
+    case 'GET_HOME_SUCCESS':
       return state
         .set('loading', false)
         .set('data', action.data)
-    case 'GET_CONFIG_ERROR':
+    case 'GET_HOME_ERROR':
       return state
         .set('error', action.error)
         .set('loading', false)
@@ -26,4 +26,4 @@ function configReducer (state = initialState, action) {
   }
 }
 
-export default configReducer
+export default homeReducer

@@ -1,24 +1,24 @@
 import { createSelector } from 'reselect'
 
-const selectConfig = (state) => state.get('config')
+const selectConfig = (state) => state.get('home')
 
 const makeHeroDisplay = () => createSelector(
   selectConfig,
-  (configState) => configState.getIn(['data', 'field_hero_display']) === 'true'
+  (homeState) => homeState.getIn(['data', 'fieldHeroDisplay']) === 1
 )
 
 const makeHeroTitle = () => createSelector(
   selectConfig,
-  (configState) => configState.getIn(['data', 'field_hero_title'])
+  (homeState) => homeState.getIn(['data', 'fieldHeroTitle'])
 )
 const makeHeroSubTitle = () => createSelector(
   selectConfig,
-  (configState) => configState.getIn(['data', 'field_hero_subtitle'])
+  (homeState) => homeState.getIn(['data', 'fieldHeroSubtitle'])
 )
 
 const makeHeroImgUrl = () => createSelector(
   selectConfig,
-  (configState) => configState.getIn(['data', 'field_hero_image'])
+  (homeState) => homeState.getIn(['data', 'fieldHeroImage', 'url'])
 )
 
 export {

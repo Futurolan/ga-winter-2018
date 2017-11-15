@@ -6,7 +6,7 @@ import stylesheet from './styles.scss'
 const Hero = (props) => (
   <section className='ga-hero'>
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <div className='hero is-fullheight has-text-centered' style={{background: `url('${process.env.BACKEND_API_URL}${props.imgUrl}') no-repeat center center`}}>
+    <div className='hero is-fullheight has-text-centered' style={{background: `url('${props.imgUrl}') no-repeat center center`}}>
       <div className='hero-body'>
         <div className='container'>
           <h1 className='title has-text-white'>{props.title}</h1>

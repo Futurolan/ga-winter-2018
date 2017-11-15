@@ -9,12 +9,12 @@ import Hero from 'containers/Hero'
 import NewsBlock from 'components/NewsBlock'
 import InfoBlock from 'components/InfoBlock'
 
-import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl} from 'selectors/config'
-import {getConfig} from 'actions/config'
+import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl} from 'selectors/home'
+import {getHome} from 'actions/home'
 
 class HomePage extends React.Component {
-  static getInitialProps ({ store }) {
-    if (store.getState().getIn(['config', 'data']) === false) { store.dispatch(getConfig()) }
+  static getInitialProps ({ store, query }) {
+    if (store.getState().getIn(['home', 'data']) === false) { store.dispatch(getHome(query.edition)) }
   }
 
   render () {
@@ -22,7 +22,6 @@ class HomePage extends React.Component {
     return (
       <Layout name='home-page'>
         <div>
-
           {heroDisplay && <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />}
           <InfoBlock />
           <NewsBlock />

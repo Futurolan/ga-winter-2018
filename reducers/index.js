@@ -2,12 +2,12 @@ import { combineReducers } from 'redux-immutable'
 import { loadingBarReducer } from 'react-redux-loading-bar'
 
 import globalReducer from 'reducers/global'
-import configReducer from 'reducers/config'
+import homeReducer from 'reducers/home'
 
 export default function createReducer () {
   return combineReducers({
     global: globalReducer,
-    config: configReducer,
+    home: homeReducer,
     loadingBar: loadingBarReducer
   })
 }

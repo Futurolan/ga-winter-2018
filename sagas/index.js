@@ -1,7 +1,7 @@
 import { fork } from 'redux-saga/effects'
 
-import getConfig from 'sagas/config'
+import getHome from './home'
 
 export default function * root () {
-  yield fork(getConfig)
+  yield fork(getHome)
 }
