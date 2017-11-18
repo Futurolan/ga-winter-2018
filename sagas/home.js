@@ -9,20 +9,40 @@ import {getHomeSuccess, getHomeError} from 'actions/home'
 export function * _getHome (action) {
   const backendApiUrl = process.env.BACKEND_API_URL
   const editionId = process.env.EDITION_ID || action.id
-  const schema = `{
-    nodeById(id: ${editionId}, language:fr) {
-      fieldHomePage{
-        entity{
-          fieldHeroDisplay,
-          fieldHeroTitle,
-          fieldHeroSubtitle,
-          fieldHeroImage{
-            url
+  const schema =
+    `{
+      nodeById(id: "${editionId}", language: fr) {
+        ... on NodeEdition {
+          fieldHomePage {
+            entity {
+              ... on NodeHomePage {
+                fieldHeroDisplay
+                fieldHeroTitle
+                fieldHeroSubtitle
+                fieldHeroImage {
+                  url
+                }
+                fieldCountdownDisplay
+                fieldCountdownDate
+                fieldCountdownText
+              }
+            }
           }
         }
       }
-    }
-  }`
+      nodeQuery(filter: {type: "news"}, limit: 3) {
+        entities {
+          ... on NodeNews {
+            nid
+            title
+            entityCreated,
+            fieldNewsImage{
+              url
+            }
+          }
+        }
+      }
+    }`
   try {
     const home = yield call(request, `${backendApiUrl}/graphql`, {
       credentials: 'include',
@@ -33,18 +53,12 @@ export function * _getHome (action) {
       body: JSON.stringify({query: schema})
     })
     yield put(showLoading())
-
-    if (home.data.nodeById && home.data.nodeById.fieldHomePage && home.data.nodeById.fieldHomePage.entity) {
-      yield put(getHomeSuccess(fromJS(home.data.nodeById.fieldHomePage.entity)))
+    if (home.errors) {
+      throw new Error(home.errors[0].message)
     } else {
-      if (home.errors) {
-        throw new Error(home.errors[0].message)
-      } else {
-        throw new Error('HomePage not found')
-      }
+      yield put(getHomeSuccess(fromJS(home.data)))
     }
   } catch (error) {
-    console.log(error)
     yield put(getHomeError(error))
   } finally {
     yield put(hideLoading())

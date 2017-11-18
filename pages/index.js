@@ -5,11 +5,11 @@ import { createStructuredSelector } from 'reselect'
 import PropTypes from 'prop-types'
 
 import Layout from 'components/Layout'
-import Hero from 'containers/Hero'
-import NewsBlock from 'components/NewsBlock'
-import InfoBlock from 'components/InfoBlock'
+import Hero from 'components/Hero'
+import NewsBlock from 'components/HomeNews'
+import CountDown from 'components/CountDown'
 
-import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl} from 'selectors/home'
+import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl, makeNews, makeCountdownDisplay, makeCountdownDate, makeCountdownText} from 'selectors/home'
 import {getHome} from 'actions/home'
 
 class HomePage extends React.Component {
@@ -18,13 +18,13 @@ class HomePage extends React.Component {
   }
 
   render () {
-    const {heroDisplay, heroTitle, heroSubTitle, heroImgUrl} = this.props
+    const {heroDisplay, heroTitle, heroSubTitle, heroImgUrl, news, countdownDisplay, countdownDate, countdownText} = this.props
     return (
       <Layout name='home-page'>
         <div>
           {heroDisplay && <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />}
-          <InfoBlock />
-          <NewsBlock />
+          {countdownDisplay && <CountDown date={countdownDate} text={countdownText} />}
+          <NewsBlock news={news} />
         </div>
       </Layout>
     )
@@ -35,14 +35,22 @@ HomePage.propTypes = {
   heroDisplay: PropTypes.bool,
   heroTitle: PropTypes.string,
   heroSubTitle: PropTypes.string,
-  heroImgUrl: PropTypes.string
+  heroImgUrl: PropTypes.string,
+  news: PropTypes.object,
+  countdownDisplay: PropTypes.bool,
+  countdownDate: PropTypes.string,
+  countdownText: PropTypes.string
 }
 
 const mapStateToProps = createStructuredSelector({
   heroDisplay: makeHeroDisplay(),
   heroTitle: makeHeroTitle(),
   heroSubTitle: makeHeroSubTitle(),
-  heroImgUrl: makeHeroImgUrl()
+  heroImgUrl: makeHeroImgUrl(),
+  news: makeNews(),
+  countdownDisplay: makeCountdownDisplay(),
+  countdownDate: makeCountdownDate(),
+  countdownText: makeCountdownText()
 })
 
 export default withReduxSaga(connect(mapStateToProps)(HomePage))

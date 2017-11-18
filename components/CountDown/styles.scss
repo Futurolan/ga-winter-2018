@@ -1,0 +1,13 @@
+.ga-countdown{
+  background: url('/static/pattern-dark.png');
+  padding:6rem 0;
+
+  .countdown-number{
+    font-size:5rem;
+    font-weight: bold;
+  }
+  hr{
+    margin:0 5rem;
+    height:5px;
+  }
+}
