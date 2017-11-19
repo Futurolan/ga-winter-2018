@@ -5,7 +5,7 @@ import Countdown, {zeroPad, getTimeDifference} from 'react-countdown-now'
 import stylesheet from './styles.scss'
 
 const renderer = ({ days, hours, minutes, seconds }) => {
-    // Render a countdown
+  // Render a countdown
   return <div className='columns'>
     <div className='column'>
       <div className='countdown-number'>{zeroPad(days)}</div>
