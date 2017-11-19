@@ -7,12 +7,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "bulma": "^0.6.1",
     "bulma-ribbon": "0.0.1",
     "classnames": "^2.2.5",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.2",
     "isomorphic-unfetch": "^2.0.0",
