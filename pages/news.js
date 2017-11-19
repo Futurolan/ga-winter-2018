@@ -11,7 +11,7 @@ class NewsPage extends React.Component {
           <h1 className='title'>Actualités</h1>
           <p className='content'>
           Ici les news
-        </p>
+          </p>
         </div>
       </Layout>
     )
