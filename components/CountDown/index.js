@@ -6,26 +6,26 @@ import stylesheet from './styles.scss'
 
 const renderer = ({ days, hours, minutes, seconds }) => {
   // Render a countdown
-  return <div className='columns'>
+  return <div className='columns is-variable is-8'>
     <div className='column'>
-      <div className='countdown-number'>{zeroPad(days)}</div>
+      <div className='is-size-1 has-text-weight-bold'>{zeroPad(days)}</div>
       <hr />
-      <div className='is-size-2'>{days <= 1 ? 'Jour' : 'Jours'}</div>
+      <div className='is-size-4'>{days <= 1 ? 'Jour' : 'Jours'}</div>
     </div>
     <div className='column'>
-      <div className='countdown-number'>{zeroPad(hours)}</div>
+      <div className='is-size-1 has-text-weight-bold'>{zeroPad(hours)}</div>
       <hr />
-      <div className='is-size-2'>{hours <= 1 ? 'Heure' : 'Heures'}</div>
+      <div className='is-size-4'>{hours <= 1 ? 'Heure' : 'Heures'}</div>
     </div>
     <div className='column'>
-      <div className='countdown-number'>{zeroPad(minutes)}</div>
+      <div className='is-size-1 has-text-weight-bold'>{zeroPad(minutes)}</div>
       <hr />
-      <div className='is-size-2'>{minutes <= 1 ? 'Minute' : 'Minutes'}</div>
+      <div className='is-size-4'>{minutes <= 1 ? 'Minute' : 'Minutes'}</div>
     </div>
     <div className='column'>
-      <div className='countdown-number'>{zeroPad(seconds)}</div>
+      <div className='is-size-1 has-text-weight-bold'>{zeroPad(seconds)}</div>
       <hr />
-      <div className='is-size-2'>{seconds <= 1 ? 'Seconde' : 'Secondes'}</div>
+      <div className='is-size-4'>{seconds <= 1 ? 'Seconde' : 'Secondes'}</div>
     </div>
   </div>
 }
@@ -43,8 +43,8 @@ const CountDown = (props) => {
       <section className='ga-countdown section'>
         <style dangerouslySetInnerHTML={{__html: stylesheet}} />
 
-        <div className='has-text-white has-text-centered container'>
-          <h3 className='title has-text-white is-size-1 is-uppercase'>{props.text}</h3>
+        <div className=' has-text-centered container'>
+          <h3 className='title  is-size-3'>{props.text}</h3>
           <Countdown date={props.date} renderer={renderer} />
         </div>
       </section>
