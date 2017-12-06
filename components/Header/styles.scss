@@ -1,9 +1,24 @@
 .ga-header {
   nav {
-    padding: 1.5rem 0;
-    background-color: transparent;
+    padding: 1.2rem 0;
     width:100%;
-    position: absolute;
+    border-bottom: 1px solid #222;
+    .navbar-item{
+      margin:0 0.2rem;
+    }
   }
 
+
+}
+.home-page{
+  nav{
+    position: absolute;
+    background-color: transparent;
+    a{
+      color:white
+    }
+    .navbar-menu{
+      background-color: black;
+    }
+  }
 }
