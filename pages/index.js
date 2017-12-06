@@ -8,6 +8,7 @@ import Layout from 'components/Layout'
 import Hero from 'components/Hero'
 import NewsBlock from 'components/HomeNews'
 import CountDown from 'components/CountDown'
+import Info from 'components/Info'
 
 import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl, makeNews, makeCountdownDisplay, makeCountdownDate, makeCountdownText} from 'selectors/home'
 import {getHome} from 'actions/home'
@@ -23,6 +24,7 @@ class HomePage extends React.Component {
       <Layout name='home-page'>
         <div>
           {heroDisplay && <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />}
+          <Info />
           {countdownDisplay && <CountDown date={countdownDate} text={countdownText} />}
           <NewsBlock news={news} />
         </div>
