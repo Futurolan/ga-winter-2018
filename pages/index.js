@@ -9,6 +9,7 @@ import Hero from 'components/Hero'
 import NewsBlock from 'components/HomeNews'
 import CountDown from 'components/CountDown'
 import Info from 'components/Info'
+import PartnersCarousel from 'components/PartnersCarousel'
 
 import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl, makeNews, makeCountdownDisplay, makeCountdownDate, makeCountdownText} from 'selectors/home'
 import {getHome} from 'actions/home'
@@ -27,6 +28,7 @@ class HomePage extends React.Component {
           <Info />
           {countdownDisplay && <CountDown date={countdownDate} text={countdownText} />}
           <NewsBlock news={news} />
+          <PartnersCarousel />
         </div>
       </Layout>
     )

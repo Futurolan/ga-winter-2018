@@ -6,6 +6,17 @@ $family-sans-serif: "Lato", sans-serif;
 @import "../node_modules/bulma-ribbon/ribbon.sass";
 
 
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+
 body:after{
   content: "alpha";
   position: absolute;

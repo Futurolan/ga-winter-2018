@@ -3,12 +3,16 @@ import PropTypes from 'prop-types'
 import { LoadingBar } from 'react-redux-loading-bar'
 
 import Header from 'components/Header'
+import Footer from 'components/Footer'
 
 const Layout = ({ name, children }) => (
-  <div className={name}>
+  <div className={`wrapper ${name}`}>
     <Header />
     <LoadingBar showFastActions />
-    { children }
+    <main className='main'>
+      { children }
+    </main>
+    <Footer />
   </div>
 )
 

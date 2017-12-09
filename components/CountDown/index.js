@@ -40,11 +40,11 @@ renderer.propTypes = {
 const CountDown = (props) => {
   if (getTimeDifference(props.date).total > 0) {
     return (
-      <section className='ga-countdown section'>
+      <section className='ga-countdown section is-medium'>
         <style dangerouslySetInnerHTML={{__html: stylesheet}} />
 
         <div className=' has-text-centered container'>
-          <h3 className='title  is-size-3'>{props.text}</h3>
+          <h2 className='title  is-size-3'>{props.text}</h2>
           <Countdown date={props.date} renderer={renderer} />
         </div>
       </section>

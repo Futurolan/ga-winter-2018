@@ -1,0 +1,32 @@
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+.ga-partners-carousel{
+
+  .carousel-item{
+    padding:1rem;
+  }
+
+  .slick-next,.slick-prev {
+    color:black;
+    font-size:1rem;
+    transition: all 0.3s;
+    &:before{
+      display: none;
+    }
+  }
+  .slick-next{
+    right:-10px;
+    &:hover{
+      right:-15px;
+    }
+  }
+  .slick-prev{
+    left:0px;
+    z-index:1;
+    &:hover{
+      left:-5px;
+    }
+  }
+
+}

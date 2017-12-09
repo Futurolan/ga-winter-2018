@@ -18,10 +18,10 @@ class HomeNews extends React.Component {
     }
 
     return (
-      <section className='ga-home-news section is-info'>
+      <section className='ga-home-news section is-medium'>
         <style dangerouslySetInnerHTML={{__html: stylesheet}} />
         <div className='container '>
-          <h3 className='title has-text-black-bis'>Suivez nos dernières actualités</h3>
+          <h2 className='title '>Suivez nos dernières actualités</h2>
           <div className='columns is-6 is-variable'>
             {newsCards}
           </div>
