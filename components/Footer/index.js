@@ -8,7 +8,6 @@ const Footer = (props) => (
       <div className='content has-text-centered'>
         Contacts  Espace Presse  Mentions Légales  Recrutement
       </div>
-    
 
     </div>
   </footer>
