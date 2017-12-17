@@ -1,16 +1,29 @@
 import React from 'react'
+
+import ActiveLink from 'components/ActiveLink'
+
 import stylesheet from './styles.scss'
 
-const Footer = (props) => (
-  <footer className='footer ga-footer'>
-    <style dangerouslySetInnerHTML={{__html: stylesheet}} />
-    <div className='container'>
-      <div className='content has-text-centered'>
-        Contacts  Espace Presse  Mentions Légales  Recrutement
-      </div>
+class Footer extends React.Component {
+  render () {
+    return (
+      <footer className='footer ga-footer'>
+        <style dangerouslySetInnerHTML={{__html: stylesheet}} />
+        <div className='container'>
+          <div className='content has-text-centered'>
+            <ActiveLink label='Contacts' path='contacts' />
+            <span> - </span>
+            <ActiveLink label='Espace Presse' path='espace_presse' />
+            <span> - </span>
+            <ActiveLink label='Mentions Légales ' path='mentions_legales' />
+            <span> - </span>
+            <ActiveLink label='Recrutement' path='recrutement' />
+          </div>
 
-    </div>
-  </footer>
-)
+        </div>
+      </footer>
+    )
+  }
+}
 
 export default Footer
