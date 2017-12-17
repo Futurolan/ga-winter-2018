@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
-import { withRouter } from 'next/router'
-import PropTypes from 'prop-types'
+
+import ActiveLink from 'components/ActiveLink'
 
 import stylesheet from './styles.scss'
 
@@ -18,7 +18,6 @@ class Header extends React.Component {
     this.setState({isOpen: !this.state.isOpen})
   }
   render () {
-    const pathname = this.props.router.pathname
     return (
 
       <header className='ga-header'>
@@ -39,27 +38,21 @@ class Header extends React.Component {
           </div>
           <div className={classNames('navbar-menu', {'is-active': this.state.isOpen})}>
             <div className='navbar-start' />
-            <Link href='/news'>
-              <a
-                className={classNames('navbar-item', {'is-active': pathname === '/news'})}>Actualités</a>
-            </Link>
-            <Link href='/billeterie'>
-              <a
-                className={classNames('navbar-item', {'is-active': pathname === '/billeterie'})}>Billeterie</a>
-            </Link>
-            <Link href='/tournois'>
-              <a
-                className={classNames('navbar-item', {'is-active': pathname === '/tournois'})}>Tournois</a>
-            </Link>
-            <Link href='/info'>
-              <a
-                className={classNames('navbar-item', {'is-active': pathname === '/info'})}>Infos
-                  pratiques</a>
-            </Link>
-            <Link href='/partenaires'>
-              <a
-                className={classNames('navbar-item', {'is-active': pathname === '/partenaires'})}>Partenaires</a>
-            </Link>
+            <div className='navbar-item'>
+              <ActiveLink label='Actualités' path='news' />
+            </div>
+            <div className='navbar-item'>
+              <ActiveLink label='Billeterie' path='billeterie' />
+            </div>
+            <div className='navbar-item'>
+              <ActiveLink label='Tournois' path='tournois' />
+            </div>
+            <div className='navbar-item'>
+              <ActiveLink label='Infos pratiques' path='info' />
+            </div>
+            <div className='navbar-item'>
+              <ActiveLink label='Partenaires' path='partenaires' />
+            </div>
             <div className='navbar-end'>
               <div className='navbar-item'>
                 <div className='field is-grouped'>
@@ -88,8 +81,4 @@ class Header extends React.Component {
   }
 }
 
-Header.propTypes = {
-  router: PropTypes.object
-}
-
-export default withRouter(Header)
+export default Header
