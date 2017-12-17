@@ -13,9 +13,8 @@ class PartnersCarousel extends React.Component {
 
     }
     return (
-      <section className='section ga-partners-carousel '>
+      <section className='section ga-partners-carousel'>
         <style dangerouslySetInnerHTML={{__html: stylesheet}} />
-        <h2 className='title '>Nos partenaires</h2>
         <Slider {...settings}>
           <div className='carousel-item'>
             <img src='http://placekitten.com/g/400/200' />
