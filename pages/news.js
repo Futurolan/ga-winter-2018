@@ -7,11 +7,13 @@ class NewsPage extends React.Component {
   render () {
     return (
       <Layout name='news-page'>
-        <div>
-          <h1 className='title'>Actualités</h1>
-          <p className='content'>
-          Ici les news
-          </p>
+        <div className='container'>
+          <div className='section'>
+            <h1 className='title'>Actualités</h1>
+            <p className='content'>
+              NewsCards here !!!
+            </p>
+          </div>
         </div>
       </Layout>
     )

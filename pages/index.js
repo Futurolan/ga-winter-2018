@@ -11,7 +11,7 @@ import CountDown from 'components/CountDown'
 import Info from 'components/Info'
 import PartnersCarousel from 'components/PartnersCarousel'
 
-import {makeHeroDisplay, makeHeroTitle, makeHeroSubTitle, makeHeroImgUrl, makeNews, makeCountdownDisplay, makeCountdownDate, makeCountdownText} from 'selectors/home'
+import {makeNews} from 'selectors/home'
 import {getHome} from 'actions/home'
 
 class HomePage extends React.Component {
@@ -20,13 +20,13 @@ class HomePage extends React.Component {
   }
 
   render () {
-    const {heroDisplay, heroTitle, heroSubTitle, heroImgUrl, news, countdownDisplay, countdownDate, countdownText} = this.props
+    const {news} = this.props
     return (
       <Layout name='home-page'>
         <div>
-          {heroDisplay && <Hero title={heroTitle} subtitle={heroSubTitle} imgUrl={heroImgUrl} />}
+          <Hero title={'Galloween 2018'} subtitle={'Venez frémir avec nous le 31 octobre 2018 '} imgUrl={'/static/img/bg-home-blue-area.jpg'} />
           <Info />
-          {countdownDisplay && <CountDown date={countdownDate} text={countdownText} />}
+          <CountDown date={'2019-03-04T22:33:05.797Z'} text={'Un texte ici'} />
           <NewsBlock news={news} />
           <PartnersCarousel />
         </div>
@@ -36,25 +36,11 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  heroDisplay: PropTypes.bool,
-  heroTitle: PropTypes.string,
-  heroSubTitle: PropTypes.string,
-  heroImgUrl: PropTypes.string,
-  news: PropTypes.object,
-  countdownDisplay: PropTypes.bool,
-  countdownDate: PropTypes.string,
-  countdownText: PropTypes.string
+  news: PropTypes.object
 }
 
 const mapStateToProps = createStructuredSelector({
-  heroDisplay: makeHeroDisplay(),
-  heroTitle: makeHeroTitle(),
-  heroSubTitle: makeHeroSubTitle(),
-  heroImgUrl: makeHeroImgUrl(),
-  news: makeNews(),
-  countdownDisplay: makeCountdownDisplay(),
-  countdownDate: makeCountdownDate(),
-  countdownText: makeCountdownText()
+  news: makeNews()
 })
 
 export default withReduxSaga(connect(mapStateToProps)(HomePage))

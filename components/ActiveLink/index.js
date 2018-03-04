@@ -18,8 +18,8 @@ class ActiveLink extends React.Component {
 
 ActiveLink.propTypes = {
   router: PropTypes.object,
-  label: PropTypes.string.required,
-  path: PropTypes.string.required
+  label: PropTypes.string,
+  path: PropTypes.string
 }
 
 export default withRouter(ActiveLink)
