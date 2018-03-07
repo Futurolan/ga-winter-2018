@@ -1,5 +1,4 @@
 import React from 'react'
-import {withReduxSaga} from 'configureStore'
 
 import Layout from 'components/Layout'
 
@@ -20,4 +19,4 @@ class NewsPage extends React.Component {
   }
 }
 
-export default withReduxSaga(NewsPage)
+export default NewsPage
