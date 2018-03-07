@@ -39,7 +39,10 @@ function HomeNews ({
 export const news = gql`
 {
   nodeQuery(filter:{
-  conditions:[{field:"type",value:["news"],operator:EQUAL}]},
+  conditions:[
+    {field:"field_news_editions",value:["${process.env.EDITION_ID}"]},
+    {field:"type",value:["news"],operator:EQUAL}
+  ]},
   sort:[{field:"created",direction:DESC}],
   limit:3) {
     entities {
