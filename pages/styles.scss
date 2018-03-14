@@ -34,3 +34,18 @@ body:after{
   line-height: 27px;
   transform:rotate(45deg);
 }
+
+
+.image.is-5by1{
+  padding-top: 20%;
+}
+
+.image.is-5by1 img{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

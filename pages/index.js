@@ -4,20 +4,27 @@ import withData from 'lib/withData'
 
 import Layout from 'components/Layout'
 import Hero from 'components/Hero'
-import HomeNews from 'components/HomeNews'
-// import CountDown from 'components/CountDown'
-import Info from 'components/Info'
-// import PartnersCarousel from 'components/PartnersCarousel'
+import HomeNewsList from 'components/HomeNewsList'
+import HomeInfoBlocks from 'components/HomeInfo'
+import Meta from 'components/Meta'
 
 class HomePage extends React.Component {
   render () {
     return (
       <Layout name='home-page'>
+        <Meta title='Accueil' />
         <div>
           <Hero title={'Galloween 2018'} subtitle={'Venez frémir avec nous le 31 octobre 2018 '} imgUrl={'/static/img/bg-home-blue-area.jpg'} />
-          <Info />
-          {/* <CountDown date={'2019-03-04T22:33:05.797Z'} text={'Un texte ici'} /> */}
-          <HomeNews />
+          <section className='section is-medium'>
+            <div className='container'>
+              <HomeInfoBlocks />
+            </div>
+          </section>
+          <section className='section'>
+            <div className='container'>
+              <HomeNewsList />
+            </div>
+          </section>
           {/* <PartnersCarousel /> */}
         </div>
       </Layout>

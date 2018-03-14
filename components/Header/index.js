@@ -39,19 +39,19 @@ class Header extends React.Component {
           <div className={classNames('navbar-menu', {'is-active': this.state.isOpen})}>
             <div className='navbar-start' />
             <div className='navbar-item'>
-              <ActiveLink label='Actualités' path='news' />
+              <ActiveLink label='Actualités' path='/news' />
             </div>
             <div className='navbar-item'>
-              <ActiveLink label='Billeterie' path='billeterie' />
+              <ActiveLink label='Billeterie' path='/billeterie' />
             </div>
             <div className='navbar-item'>
-              <ActiveLink label='Tournois' path='tournois' />
+              <ActiveLink label='Tournois' path='/tournois' />
             </div>
             <div className='navbar-item'>
-              <ActiveLink label='Infos pratiques' path='info' />
+              <ActiveLink label='Infos pratiques' path='/info' />
             </div>
             <div className='navbar-item'>
-              <ActiveLink label='Partenaires' path='partenaires' />
+              <ActiveLink label='Partenaires' path='/partenaires' />
             </div>
             <div className='navbar-end'>
               <div className='navbar-item'>
