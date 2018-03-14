@@ -12,8 +12,8 @@ class HomePage extends React.Component {
   render () {
     return (
       <Layout name='home-page'>
-        <Meta title='Accueil' />
         <div>
+          <Meta title='Accueil' />
           <Hero title={'Galloween 2018'} subtitle={'Venez frémir avec nous le 31 octobre 2018 '} imgUrl={'/static/img/bg-home-blue-area.jpg'} />
           <section className='section is-medium'>
             <div className='container'>

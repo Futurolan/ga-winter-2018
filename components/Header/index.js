@@ -48,7 +48,7 @@ class Header extends React.Component {
               <ActiveLink label='Tournois' path='/tournois' />
             </div>
             <div className='navbar-item'>
-              <ActiveLink label='Infos pratiques' path='/info' />
+              <ActiveLink label='Infos pratiques' path='/infos' />
             </div>
             <div className='navbar-item'>
               <ActiveLink label='Partenaires' path='/partenaires' />

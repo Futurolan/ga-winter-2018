@@ -9,19 +9,19 @@ const Meta = (props) => {
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
-      {/* <meta name='image' content='GENERAL IMAGE URL' /> */}
+      <meta name='image' content={`${process.env.BASE_URL}/static/img/logo.png`} />
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />
-      {/* <meta itemProp='image' content='GENERAL IMAGE URL' /> */}
+      <meta itemProp='image' content={`${process.env.BASE_URL}/static/img/logo.png`} />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
       <meta name='og:title' content={title} />
       <meta name='og:description' content={description} />
-      {/* <meta name='og:image' content='FACEBOOK SITE IMAGE' /> */}
+      <meta name='og:image' content={`${process.env.BASE_URL}/static/img/logo.png`} />
       {/* <meta name='og:url' content={window.location.href} /> */}
       <meta name='og:site_name' content={title} />
-      <meta name='og:locale' content='en_FR' />
+      <meta name='og:locale' content='fr_FR' />
       <meta name='og:type' content='website' />
     </Head>
   )

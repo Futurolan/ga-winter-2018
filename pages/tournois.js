@@ -1,18 +1,17 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import withData from 'lib/withData'
-import NewsList from 'components/NewsList'
 import Meta from 'components/Meta'
 
-class NewsPage extends React.Component {
+class TournoisPage extends React.Component {
   render () {
     return (
-      <Layout name='news-page'>
-        <Meta title='Actualités' />
+      <Layout name='tournois-page'>
+        <Meta title='Tournois' />
         <div className='section'>
           <div className='container'>
-            <h1 className='title'>Actualités</h1>
-            <NewsList />
+            <h1 className='title'>Tournois</h1>
+            //TODO la liste des tournois
           </div>
         </div>
       </Layout>
@@ -20,4 +19,4 @@ class NewsPage extends React.Component {
   }
 }
 
-export default withData(NewsPage)
+export default withData(TournoisPage)
