@@ -13,7 +13,7 @@ class Footer extends React.Component {
           <div className='content has-text-centered'>
             <ActiveLink label='Contacts' path='contacts' />
             <span> - </span>
-            <ActiveLink label='Espace Presse' path='espace_presse' />
+            <ActiveLink label='Accreditation Presse' path='espace-presse' />
             <span> - </span>
             <ActiveLink label='Mentions Légales ' path='mentions_legales' />
             <span> - </span>
