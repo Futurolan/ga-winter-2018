@@ -47,7 +47,7 @@ class ContactsPage extends React.Component {
               Les droits d'auteur rattachés au contenu affiché sur le site www.gamers-assembly.net appartiennent à l'association FuturoLAN ou à des tiers propriétaires du contenu.
               </p>
               <p>
-              Le logo GA a été créé par Benoît Clair et les droits d'utilisation sont la propriété de l'Association FuturoLAN.
+                Le logo GA a été créé par <a href='http://www.benoitclair.com/'>Benoît Clair</a> et les droits d'utilisation sont la propriété de l'Association FuturoLAN.
               </p>
               <p>
               Aucun contenu de ce site ne peut être copié, reproduit, distribué, republié, téléchargé, affiché, publié ou transmis sous quelque forme ou par quelque moyen que ce soit sans la permission de FuturoLAN ou des tiers propriétaires du contenu.
