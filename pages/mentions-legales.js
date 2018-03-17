@@ -6,7 +6,7 @@ import Meta from 'components/Meta'
 class ContactsPage extends React.Component {
   render () {
     return (
-      <Layout name='contacts-page'>
+      <Layout name='mentions-legales-page'>
         <Meta title='Mentions légales' />
         <div className='section'>
           <div className='container'>
