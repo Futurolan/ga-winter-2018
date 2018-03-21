@@ -41,9 +41,9 @@ class Header extends React.Component {
             <div className='navbar-item'>
               <ActiveLink label='Actualités' path='/news' />
             </div>
-            <div className='navbar-item'>
-              <ActiveLink label='Billeterie' path='/billeterie' />
-            </div>
+            {/* <div className='navbar-item'> */}
+            {/* <ActiveLink label='Billeterie' path='/billeterie' /> */}
+            {/* </div> */}
             <div className='navbar-item'>
               <ActiveLink label='Tournois' path='/tournois' />
             </div>
