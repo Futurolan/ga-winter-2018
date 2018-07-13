@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Meta from 'components/Meta'
+import './styles.scss'
 
 class InfosPage extends React.Component {
   render () {

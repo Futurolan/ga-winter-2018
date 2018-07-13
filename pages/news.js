@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from 'components/Layout'
 import NewsList from 'components/NewsList'
 import Meta from 'components/Meta'
+import './styles.scss'
 
 class NewsPage extends React.Component {
   render () {
