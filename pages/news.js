@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from 'components/Layout'
-import withData from 'lib/withData'
 import NewsList from 'components/NewsList'
 import Meta from 'components/Meta'
 
@@ -20,4 +19,4 @@ class NewsPage extends React.Component {
   }
 }
 
-export default withData(NewsPage)
+export default NewsPage

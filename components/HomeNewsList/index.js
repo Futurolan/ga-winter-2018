@@ -48,16 +48,16 @@ export const news = gql`
         created,
         title,
         image:fieldNewsImage{
-          mobile:derivative(style:crop_2_1_720x360){
+          mobile:derivative(style:CROP_2_1_720X360){
             url
           }
-          desktop:derivative(style:crop_2_1_288x144){
+          desktop:derivative(style:CROP_2_1_288X144){
             url
           }
-          widescreen:derivative(style:crop_2_1_352x176){
+          widescreen:derivative(style:CROP_2_1_352X176){
             url
           }
-          fullhd:derivative(style:crop_2_1_416x208){
+          fullhd:derivative(style:CROP_2_1_416X208){
             url
           }
         }

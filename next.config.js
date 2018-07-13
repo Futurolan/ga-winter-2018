@@ -3,7 +3,7 @@ const withSass = require('@zeit/next-sass')
 const webpack = require('webpack')
 
 module.exports = withSass({
-  
+
   webpack: (config, { dev }) => {
     config.module.rules.push(
       {
@@ -15,13 +15,13 @@ module.exports = withSass({
           emitWarning: dev
         }
       }
-    
+
     )
     config.plugins.push(
       new webpack.EnvironmentPlugin(process.env)
     )
-    
+
     return config
   }
-  
+
 })
