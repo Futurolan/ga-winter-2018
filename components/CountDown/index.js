@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Countdown, {zeroPad, getTimeDifference} from 'react-countdown-now'
 
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 const renderer = ({ days, hours, minutes, seconds }) => {
   // Render a countdown
@@ -41,7 +41,6 @@ const CountDown = (props) => {
   if (getTimeDifference(props.date).total > 0) {
     return (
       <section className='ga-countdown section is-medium'>
-        <style dangerouslySetInnerHTML={{__html: stylesheet}} />
 
         <div className=' has-text-centered container'>
           <h2 className='title  is-size-3'>{props.text}</h2>

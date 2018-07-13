@@ -3,7 +3,7 @@ $fa-font-path:   "/static/fonts";
 
 $family-sans-serif: "Lato", sans-serif;
 @import "../node_modules/bulma/bulma.sass";
-@import "../node_modules/bulma-ribbon/ribbon.sass";
+@import "../node_modules/bulma-ribbon/dist/css/bulma-ribbon";
 
 
 .wrapper {

@@ -1,19 +1,11 @@
 {
-  "presets": ["next/babel","env"],
+  "presets": ["next/babel"],
   "plugins": [
     [
       "module-resolver",
       {
         "root": ["./"]
       }
-    ],
-    [
-      "wrap-in-js",
-      {
-        "extensions": ["css$", "scss$"]
-      }
-    ],
-    ["transform-define", "./env-config.js"],
-    ["transform-class-properties"]
+    ]
   ]
 }

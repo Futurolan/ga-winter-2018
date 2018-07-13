@@ -1,7 +1,5 @@
 import React from 'react'
 
-import withData from 'lib/withData'
-
 import Layout from 'components/Layout'
 import Hero from 'components/Hero'
 import HomeNewsList from 'components/HomeNewsList'
@@ -32,4 +30,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default withData(HomePage)
+export default HomePage

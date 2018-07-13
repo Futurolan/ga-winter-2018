@@ -3,12 +3,11 @@ import PropTypes from 'prop-types'
 import Moment from 'react-moment'
 import Link from 'next/link'
 
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 const NewsCard = (props) => (
   <div className='ga-news-card card has-ribbon is-shadowless'>
     <div className='ribbon  is-size-7'><Moment unix format='DD/MM/YYYY'>{props.created}</Moment></div>
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <Link as={`/news/${props.nid}`} href={`/news-single?nid=${props.nid}`}>
       <div>
         <div className='card-image'>

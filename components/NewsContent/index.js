@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import PropTypes from 'prop-types'
-import stylesheet from './styles.scss'
+import './styles.scss'
 import Moment from 'react-moment'
 import Meta from 'components/Meta'
 
@@ -11,8 +11,7 @@ function NewsContent ({data: { loading, error, node }}) {
 
   if (node) {
     return <div className='ga-news-content'>
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-      <Meta title={node.title} image={node.image.fullhd.url} description={node.description}/>
+      <Meta title={node.title} image={node.image.fullhd.url} description={node.description} />
       <section className='section'>
 
         <div className='container'>

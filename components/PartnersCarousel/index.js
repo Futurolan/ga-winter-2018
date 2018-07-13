@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 class PartnersCarousel extends React.Component {
   render () {
@@ -14,7 +14,6 @@ class PartnersCarousel extends React.Component {
     }
     return (
       <section className='section ga-partners-carousel'>
-        <style dangerouslySetInnerHTML={{__html: stylesheet}} />
         <Slider {...settings}>
           <div className='carousel-item'>
             <img src='http://placekitten.com/g/400/200' />

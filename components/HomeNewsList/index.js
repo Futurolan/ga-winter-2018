@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import stylesheet from './styles.scss'
+import './styles.scss'
 import NewsCard from 'components/NewsCard'
 import PropTypes from 'prop-types'
 
@@ -12,7 +12,6 @@ function HomeNewsList ({
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length) {
     return <div className='ga-home-news-list'>
-      <style dangerouslySetInnerHTML={{__html: stylesheet}} />
       <h2 className='title '>Suivez nos dernières actualités</h2>
       <div className='columns is-6 is-variable'>
         {nodeQuery.entities.map((news) => (

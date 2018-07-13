@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 const Hero = (props) => (
   <section className='ga-hero'>
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
     <div className={`hero is-large has-text-centered`} style={{background: `url('${props.imgUrl}') no-repeat center center`}}>
       <div className='hero-body'>
         <div className='container'>

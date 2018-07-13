@@ -1,9 +1,8 @@
 import React from 'react'
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 const HomeInfo = () => (
   <div className='ga-home-info'>
-    <style dangerouslySetInnerHTML={{__html: stylesheet}} />
     <div className='columns is-variable is-8 is-centered'>
       <div className='column is-one-quarter'>
         <h3 className='title has-text-weight-bold'>Nouvelle édition</h3>

@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import ActiveLink from 'components/ActiveLink'
 
-import stylesheet from './styles.scss'
+import './styles.scss'
 
 class Header extends React.Component {
   constructor (props) {
@@ -21,7 +21,6 @@ class Header extends React.Component {
     return (
 
       <header className='ga-header'>
-        <style dangerouslySetInnerHTML={{__html: stylesheet}} />
         <nav className='navbar is-transparent'>
 
           <div className='navbar-brand'>
