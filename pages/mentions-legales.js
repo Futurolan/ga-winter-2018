@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from 'components/Layout'
-import withData from 'lib/withData'
 import Meta from 'components/Meta'
 
 class ContactsPage extends React.Component {
@@ -63,4 +62,4 @@ class ContactsPage extends React.Component {
   }
 }
 
-export default withData(ContactsPage)
+export default ContactsPage

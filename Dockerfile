@@ -11,4 +11,4 @@ RUN npm install
 RUN npm run-script build
 
 
-CMD npm run-script build && npm start
+CMD npm start

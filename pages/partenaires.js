@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from 'components/Layout'
-import withData from 'lib/withData'
 import Meta from 'components/Meta'
 
 class PartenairesPage extends React.Component {
@@ -19,4 +18,4 @@ class PartenairesPage extends React.Component {
   }
 }
 
-export default withData(PartenairesPage)
+export default PartenairesPage

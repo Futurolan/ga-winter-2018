@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from 'components/Layout'
-import withData from 'lib/withData'
 import Meta from 'components/Meta'
 
 class TournoisPage extends React.Component {
@@ -19,4 +18,4 @@ class TournoisPage extends React.Component {
   }
 }
 
-export default withData(TournoisPage)
+export default TournoisPage
