@@ -3,7 +3,7 @@ FROM node:alpine
 EXPOSE 3000
 
 ARG EDITION_ID=1
-ARG BACKEND_API_URL=https://backoffice.ga.bmagic.fr
+ARG BACKEND_API_URL=https://backoffice.gamers-assembly.net
 
 WORKDIR /usr/src/ga-client
 COPY . .

@@ -3,17 +3,16 @@
   background-size:cover!important;
   h1{
     font-size:5rem;
-  }
+  }nav{
+     position: absolute!important;
+     background-color: transparent!important;
+     a{
+       color:white!important;
+     }
+     .navbar-menu.is-active{
+       background-color: black!important;
+       opacity:0.7!important;
+     }
+   }
 }
 
-nav{
-  position: absolute!important;
-  background-color: transparent!important;
-  a{
-    color:white!important;
-  }
-  .navbar-menu.is-active{
-    background-color: black!important;
-    opacity:0.7!important;
-  }
-}
