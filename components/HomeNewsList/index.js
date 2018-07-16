@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
+import Link from 'next/link'
 import gql from 'graphql-tag'
 import './styles.scss'
 import NewsCard from 'components/NewsCard'
@@ -12,7 +13,20 @@ function HomeNewsList ({
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length) {
     return <div className='ga-home-news-list'>
-      <h2 className='title '>Suivez nos dernières actualités</h2>
+      <div className='level'>
+        <div className='level-left'>
+          <div className='level-item'>
+            <h2 className='title '>Nos actualités</h2>
+          </div>
+        </div>
+        <div className='level-right'>
+          <div className='level-item'>
+            <Link href='/news' ><a className='button is-primary is-medium'>Voir plus</a></Link>
+
+          </div>
+        </div>
+      </div>
+
       <div className='columns is-6 is-variable'>
         {nodeQuery.entities.map((news) => (
           <div className='column is-one-third' key={news.nid}>

@@ -1,11 +1,9 @@
-@import "../../styles/color";
 
 .ga-header {
   position:fixed;
   width:100%;
   z-index:1;
   nav {
-    background-color: $base-color;
     .navbar-brand{
       margin-left:2rem;
     }
@@ -17,18 +15,8 @@
       margin:0 0.2rem;
       text-transform: uppercase;
       font-weight:bold;
-      a{
-        color:#fff;
-        &:hover{
-          opacity: 0.7;
-        }
-      }
+    }
 
-    }
-    .navbar-menu.is-active{
-      background-color: $base-color;
-      text-align:center;
-    }
     .navbar-end .field.is-grouped{
       justify-content: center;
     }
