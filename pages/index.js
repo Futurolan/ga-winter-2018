@@ -5,7 +5,7 @@ import Hero from 'components/Hero'
 import HomeNewsList from 'components/HomeNewsList'
 import HomeInfoBlocks from 'components/HomeInfo'
 import Meta from 'components/Meta'
-import './styles.scss'
+import '../styles/styles.scss'
 
 class HomePage extends React.Component {
   render () {

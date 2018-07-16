@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Meta from 'components/Meta'
-import './styles.scss'
+import '../styles/styles.scss'
 
 class PartenairesPage extends React.Component {
   render () {
