@@ -7,10 +7,10 @@ import PropTypes from 'prop-types'
 class ActiveLink extends React.Component {
   render () {
     const pathname = this.props.router.pathname
-    const {label, path} = this.props
+    const {label, path, className} = this.props
     return (
       <Link href={path}>
-        <a className={classNames({'is-active': pathname === path})}>{label}</a>
+        <a className={classNames(className, {'is-active': pathname === path})}>{label}</a>
       </Link>
     )
   }
@@ -19,7 +19,8 @@ class ActiveLink extends React.Component {
 ActiveLink.propTypes = {
   router: PropTypes.object,
   label: PropTypes.string,
-  path: PropTypes.string
+  path: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default withRouter(ActiveLink)

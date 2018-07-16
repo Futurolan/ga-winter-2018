@@ -5,7 +5,7 @@ import Hero from 'components/Hero'
 import HomeNewsList from 'components/HomeNewsList'
 import HomeInfoBlocks from 'components/HomeInfo'
 import Meta from 'components/Meta'
-import './styles.scss'
+import '../styles/styles.scss'
 
 class HomePage extends React.Component {
   render () {
@@ -13,17 +13,9 @@ class HomePage extends React.Component {
       <Layout name='home-page'>
         <div>
           <Meta title='Accueil' />
-          <Hero title={'Galloween 2018'} subtitle={'Venez frémir avec nous le 31 octobre 2018 '} imgUrl={'/static/img/bg-home-blue-area.jpg'} />
-          <section className='section is-medium'>
-            <div className='container'>
-              <HomeInfoBlocks />
-            </div>
-          </section>
-          <section className='section'>
-            <div className='container'>
-              <HomeNewsList />
-            </div>
-          </section>
+          <Hero title={'Gamers Assembly'} subtitle={'Halloween Edition 2018 '} imgUrl={'/static/img/bg-orange-area.jpg'} />
+          <HomeInfoBlocks />
+          <HomeNewsList />
           {/* <PartnersCarousel /> */}
         </div>
       </Layout>

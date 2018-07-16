@@ -37,6 +37,7 @@
     "react-dom": "^16.2.0",
     "react-moment": "^0.7.9",
     "react-slick": "^0.23.1",
+    "react-twitter-widgets": "^1.7.1",
     "sass-loader": "^7.0.1",
     "slick-carousel": "^1.8.1"
   },

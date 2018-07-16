@@ -1,6 +1,7 @@
 $fa-font-path:   "/static/fonts";
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 
+@import "color";
 $family-sans-serif: "Lato", sans-serif;
 @import "../node_modules/bulma/bulma.sass";
 @import "../node_modules/bulma-ribbon/dist/css/bulma-ribbon";
@@ -49,4 +50,5 @@ body:after{
   height: 100%;
   width: 100%;
 }
+
 

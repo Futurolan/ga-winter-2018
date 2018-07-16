@@ -1,9 +1,11 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
+import Link from 'next/link'
 import gql from 'graphql-tag'
 import './styles.scss'
 import NewsCard from 'components/NewsCard'
 import PropTypes from 'prop-types'
+import { Timeline } from 'react-twitter-widgets'
 
 function HomeNewsList ({
   data: { loading, error, nodeQuery }
@@ -12,22 +14,47 @@ function HomeNewsList ({
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length) {
     return <div className='ga-home-news-list'>
-      <h2 className='title '>Suivez nos dernières actualités</h2>
-      <div className='columns is-6 is-variable'>
-        {nodeQuery.entities.map((news) => (
-          <div className='column is-one-third' key={news.nid}>
-            <NewsCard
-              nid={news.nid}
-              created={news.created}
-              title={news.title}
-              imgMobileUrl={news.image.mobile.url}
-              imgDesktopUrl={news.image.desktop.url}
-              imgWidescreenUrl={news.image.widescreen.url}
-              imgFullhdUrl={news.image.fullhd.url}
-            />
+      <section className='section'>
+        <div className='container'>
+
+          <div className='columns is-multiline'>
+            <div className='column is-7-desktop is-12-tablet'>
+              <h2 className='title has-text-centered'>Nos actualités</h2>
+              <div className='is-multiline columns is-6 is-variable news-list'>
+                {nodeQuery.entities.map((news) => (
+                  <div className='column is-6-desktop is-12' key={news.nid}>
+                    <NewsCard
+                      nid={news.nid}
+                      created={news.created}
+                      title={news.title}
+                      imgMobileUrl={news.image.mobile.url}
+                      imgDesktopUrl={news.image.desktop.url}
+                      imgWidescreenUrl={news.image.widescreen.url}
+                      imgFullhdUrl={news.image.fullhd.url}
+                    />
+                  </div>
+                ))}
+              </div>
+              <Link href='/news' ><a className='button is-primary is-medium' >Voir plus</a></Link>
+
+            </div>
+            <div className='column is-5-desktop is-12-tablet'>
+              <h2 className='title has-text-centered'>Twitter</h2>
+
+              <Timeline
+                dataSource={{
+                  sourceType: 'profile',
+                  screenName: 'GamersAssembly',
+                  noHeader: true
+                }}
+                options={{
+                  height: '600',
+                  chrome: 'noheader nofooter noborders transparent'
+                }} />
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   }
   return <div>Loading...</div>
@@ -41,7 +68,7 @@ export const news = gql`
     {field:"type",value:["news"],operator:EQUAL}
   ]},
   sort:[{field:"created",direction:DESC}],
-  limit:3) {
+  limit:4) {
     entities {
       ... on NodeNews{
         nid,

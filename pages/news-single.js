@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from 'components/Layout'
 import NewsContent from 'components/NewsContent'
 import PropTypes from 'prop-types'
-import './styles.scss'
+import '../styles/styles.scss'
 
 class NewsPage extends React.Component {
   static getInitialProps ({ query: { nid } }) {

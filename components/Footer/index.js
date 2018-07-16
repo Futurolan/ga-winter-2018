@@ -7,16 +7,16 @@ import './styles.scss'
 class Footer extends React.Component {
   render () {
     return (
-      <footer className='footer ga-footer'>
+      <footer className='footer ga-footer has-background-dark has-text-white'>
         <div className='container'>
           <div className='content has-text-centered'>
-            <ActiveLink label='Contacts' path='/contacts' />
+            <ActiveLink className='has-text-white' label='Contacts' path='/contacts' />
             <span> - </span>
-            <ActiveLink label='Accreditation Presse' path='/espace-presse' />
+            <ActiveLink className='has-text-white' label='Accreditation Presse' path='/espace-presse' />
             <span> - </span>
-            <ActiveLink label='Mentions Légales ' path='/mentions-legales' />
+            <ActiveLink className='has-text-white' label='Mentions Légales ' path='/mentions-legales' />
             <span> - </span>
-            <ActiveLink label='Recrutement' path='/recrutement' />
+            <ActiveLink className='has-text-white' label='Recrutement' path='/recrutement' />
           </div>
 
         </div>

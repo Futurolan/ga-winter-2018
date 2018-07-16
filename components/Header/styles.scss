@@ -1,17 +1,24 @@
+
 .ga-header {
   position:fixed;
   width:100%;
   z-index:1;
   nav {
-    background-color:#0058A2;
-    a{
-      color:#fff;
+    .navbar-brand{
+      margin-left:2rem;
     }
-    padding: 1.2rem 0;
-
-    border-bottom: 1px solid #0058FF;
+    .navbar-burger{
+      margin-top:1.5rem;
+      margin-right:2rem;
+    }
     .navbar-item{
       margin:0 0.2rem;
+      text-transform: uppercase;
+      font-weight:bold;
+    }
+
+    .navbar-end .field.is-grouped{
+      justify-content: center;
     }
   }
 }
