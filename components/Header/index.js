@@ -21,12 +21,11 @@ class Header extends React.Component {
     return (
 
       <header className='ga-header'>
-        <nav className='navbar is-transparent'>
-
+        <nav className='navbar'>
           <div className='navbar-brand'>
             <Link href='/'>
-              <a className='navbar-item is-size-4'>
-                <strong>Gamers Assembly</strong>
+              <a>
+                <img src='/static/img/logo-orange-100x100.png' />
               </a>
             </Link>
             <button className='button navbar-burger is-dark' onClick={this.toggleMenu}>
@@ -55,19 +54,19 @@ class Header extends React.Component {
             <div className='navbar-end'>
               <div className='navbar-item'>
                 <div className='field is-grouped'>
-                  <a className='control' href='https://www.facebook.com/GamersAssembly'>
+                  <a className='control' target='_blank' href='https://www.facebook.com/GamersAssembly'>
                     <i className='fa fa-facebook-official' />
                   </a>
-                  <a className='control' href='https://twitter.com/GamersAssembly'>
+                  <a className='control' target='_blank' href='https://twitter.com/GamersAssembly'>
                     <i className='fa fa-twitter' />
                   </a>
-                  <a className='control' href='https://www.flickr.com/photos/futurolan'>
+                  <a className='control' target='_blank' href='https://www.flickr.com/photos/futurolan'>
                     <i className='fa fa-flickr' />
                   </a>
-                  <a className='control' href='https://twitch.tv/gamers_assembly'>
+                  <a className='control' target='_blank' href='https://twitch.tv/gamers_assembly'>
                     <i className='fa fa-twitch' />
                   </a>
-                  <a className='control' href='https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'>
+                  <a className='control' target='_blank' href='https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'>
                     <i className='fa fa-youtube-play' />
                   </a>
                 </div>

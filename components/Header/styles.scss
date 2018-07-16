@@ -6,13 +6,17 @@
   z-index:1;
   nav {
     background-color: $base-color;
-
-    padding: 1.2rem 0;
-
-    border-bottom: 1px solid #0058FF;
+    .navbar-brand{
+      margin-left:2rem;
+    }
+    .navbar-burger{
+      margin-top:1.5rem;
+      margin-right:2rem;
+    }
     .navbar-item{
       margin:0 0.2rem;
       text-transform: uppercase;
+      font-weight:bold;
       a{
         color:#fff;
         &:hover{
@@ -20,6 +24,13 @@
         }
       }
 
+    }
+    .navbar-menu.is-active{
+      background-color: $base-color;
+      text-align:center;
+    }
+    .navbar-end .field.is-grouped{
+      justify-content: center;
     }
   }
 }
