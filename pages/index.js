@@ -14,9 +14,7 @@ class HomePage extends React.Component {
         <div>
           <Meta title='Accueil' />
           <Hero title={'Galloween 2018'} subtitle={'Venez frémir avec nous le 31 octobre 2018 '} imgUrl={'/static/img/bg-home-blue-area.jpg'} />
-     
-              <HomeInfoBlocks />
-           
+          <HomeInfoBlocks />
           <section className='section'>
             <div className='container'>
               <HomeNewsList />
