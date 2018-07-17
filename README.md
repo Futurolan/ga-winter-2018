@@ -15,14 +15,8 @@ npm install
 npm dev
 ```
 
-## Production 
-```
-npm build 
-npm start 
-```
-
-## Docker
-TODO
 
 ## Reminder
-- Change Meta
+- Change lib/config.js
+- Change styles/color.scss
+- Generate favicon on https://realfavicongenerator.net 

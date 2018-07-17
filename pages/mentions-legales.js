@@ -6,7 +6,7 @@ import '../styles/styles.scss'
 class ContactsPage extends React.Component {
   render () {
     return (
-      <Layout name='mentions-legales-page'>
+      <Layout name='mentions-legales-page has-bg-star'>
         <Meta title='Mentions légales' />
         <div className='section'>
           <div className='container'>

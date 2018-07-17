@@ -3,15 +3,15 @@ import Layout from 'components/Layout'
 import NewsList from 'components/NewsList'
 import Meta from 'components/Meta'
 import '../styles/styles.scss'
-
+import config from '../lib/config'
 class NewsPage extends React.Component {
   render () {
     return (
-      <Layout name='news-page'>
-        <Meta title='Actualités' description="Toute l'actualité de la lan" />
+      <Layout name='news-page has-bg-star'>
+        <Meta title={config.news.title} description={config.news.description} />
         <div className='section'>
           <div className='container'>
-            <h1 className='title'>Actualités</h1>
+            <h1 className='title title-line has-text-centered'><span>Actualités</span></h1>
             <NewsList />
           </div>
         </div>
