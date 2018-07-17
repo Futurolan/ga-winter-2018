@@ -17,9 +17,9 @@ function HomeNewsList ({
       <section className='section'>
         <div className='container'>
 
-          <div className='columns is-multiline'>
+          <div className='columns is-multiline is-8 is-variable'>
             <div className='column is-7-desktop is-12-tablet'>
-              <h2 className='title has-text-centered'>Nos actualités</h2>
+              <h2 className='title title-line has-text-centered is-size-5 is-uppercase'><span >Actualités</span></h2>
               <div className='is-multiline columns is-6 is-variable news-list'>
                 {nodeQuery.entities.map((news) => (
                   <div className='column is-6-desktop is-12' key={news.nid}>
@@ -39,7 +39,7 @@ function HomeNewsList ({
 
             </div>
             <div className='column is-5-desktop is-12-tablet'>
-              <h2 className='title has-text-centered'>Twitter</h2>
+              <h2 className='title title-line has-text-centered is-size-5 is-uppercase'><span>Twitter</span></h2>
 
               <Timeline
                 dataSource={{
@@ -49,7 +49,7 @@ function HomeNewsList ({
                 }}
                 options={{
                   height: '600',
-                  chrome: 'noheader nofooter noborders transparent'
+                  chrome: 'noheader nofooter noborders '
                 }} />
             </div>
           </div>
