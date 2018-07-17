@@ -2,11 +2,12 @@ import React from 'react'
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 import PropTypes from 'prop-types'
+import config from '../../lib/config'
 
 const Meta = (props) => {
-  const title = props.title ? `${props.title} | Galloween 2018` : 'Galloween 2018'
-  const description = props.description ? props.description : 'Retrouvez la Gamers Assembly Halloween Edition 2018"'
-  const image = props.image ? props.image : `${process.env.BASE_URL}/static/img/logo.png`
+  const title = props.title ? `${props.title} | ${config.title}` : config.title
+  const description = props.description ? props.description : config.description
+  const image = props.image ? props.image : config.image
   return (
     <Head>
       <title>{title}</title>
