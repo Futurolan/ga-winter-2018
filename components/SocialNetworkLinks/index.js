@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'next/router'
 import { FacebookIcon, TwitterIcon, FacebookShareButton, TwitterShareButton } from 'react-share'
 
-import './styles.scss'
-
 class SocialNetworkLinks extends React.Component {
   render () {
     const { router, title } = this.props

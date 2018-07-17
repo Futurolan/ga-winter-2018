@@ -37,18 +37,18 @@ class Header extends React.Component {
           <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', {'is-active': this.state.isOpen})} >
             <div className='navbar-start' />
             <div className='navbar-item'>
-              <ActiveLink label='Actualités' className='has-text-white' path='/news' />
+              <ActiveLink label='Actualités' className='has-text-white is-uppercase has-text-weight-bold' path='/news' />
             </div>
             {/* <div className='navbar-item'> */}
             {/* <ActiveLink label='Billeterie' path='/billeterie' /> */}
             {/* </div> */}
-            <div className='navbar-item'>
+            <div className='navbar-item is-uppercase has-text-weight-bold'>
               <ActiveLink label='Tournois' className='has-text-white' path='/tournois' />
             </div>
-            <div className='navbar-item'>
+            <div className='navbar-item is-uppercase has-text-weight-bold'>
               <ActiveLink label='Infos pratiques' className='has-text-white' path='/infos' />
             </div>
-            <div className='navbar-item'>
+            <div className='navbar-item is-uppercase has-text-weight-bold'>
               <ActiveLink label='Partenaires' className='has-text-white' path='/partenaires' />
             </div>
             <div className='navbar-end'>

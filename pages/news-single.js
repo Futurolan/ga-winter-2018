@@ -14,7 +14,11 @@ class NewsPage extends React.Component {
     const {nid} = this.props
     return (
       <Layout name='news-single-page has-bg-star'>
-        <NewsContent nid={nid} />
+        <section className='section'>
+          <div className='container'>
+            <NewsContent nid={nid} />
+          </div>
+        </section>
       </Layout>
     )
   }

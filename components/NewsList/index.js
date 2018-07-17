@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import './styles.scss'
 import NewsCard from 'components/NewsCard'
 import PropTypes from 'prop-types'
 
@@ -9,13 +8,7 @@ function NewsList ({
   data: { loading, error, nodeQuery }, loadMoreNews
 }) {
   if (error) {
-    return <div className='ga-news-list has-bg-star'>
-      <section className='section'>
-        <div className='container'>
-          <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des actualités !!!</div>
-        </div>
-      </section>
-    </div>
+    return <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des actualités !!!</div>
   }
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length > 0) {
@@ -43,13 +36,7 @@ function NewsList ({
       </div>}
     </div>
   }
-  return <div className='ga-news-list has-bg-star'>
-    <section className='section'>
-      <div className='container'>
-        <div className='notification'>Chargement des actualités en cours</div>
-      </div>
-    </section>
-  </div>
+  return <div className='notification'>Chargement des actualités en cours.</div>
 }
 
 export const news = gql`
