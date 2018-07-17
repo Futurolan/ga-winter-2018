@@ -27,3 +27,4 @@ npm dev
 - Change lib/config.js
 - Change styles/color.scss
 - Generate favicon on https://realfavicongenerator.net 
+- Change the Dockerfile Args
