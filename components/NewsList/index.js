@@ -36,11 +36,11 @@ function NewsList ({
           </div>
         ))}
       </div>
-      <div className='has-text-centered'>
+      { (nodeQuery.entities.length < nodeQuery.count) && <div className='has-text-centered'>
         <button className='v-button button is-primary' onClick={() => loadMoreNews()}>
           Charger plus d'actualités
         </button>
-      </div>
+      </div>}
     </div>
   }
   return <div className='ga-news-list has-bg-star'>
@@ -64,6 +64,7 @@ query post($skip:Int!){
   sort:[{field:"created",direction:DESC}],
   offset: $skip,
   limit:12) {
+    count,
     entities {
       ... on NodeNews{
         nid,
