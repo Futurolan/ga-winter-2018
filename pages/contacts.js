@@ -9,7 +9,7 @@ class ContactsPage extends React.Component {
       <Layout name='contacts-page has-bg-star'>
         <section className='section'>
           <div className='container'>
-            <PageContent nid={process.env.CONTACT_PAGE_NID} />
+            <PageContent nid={process.env.CONTACT_PAGE_ID} />
           </div>
         </section>
       </Layout>

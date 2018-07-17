@@ -8,8 +8,8 @@ class NewsPage extends React.Component {
   render () {
     return (
       <Layout name='news-page has-bg-star'>
-        <Meta title={config.news.title} description={config.news.description} />
         <div className='section'>
+          <Meta title={config.news.title} description={config.news.description} />
           <div className='container'>
             <h1 className='title title-line has-text-centered'><span>Actualités</span></h1>
             <NewsList />

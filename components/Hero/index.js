@@ -8,7 +8,7 @@ const Hero = (props) => (
     <div className={`hero is-large has-text-centered`} style={{background: `url('${props.imgUrl}') no-repeat center center`}}>
       <div className='hero-body'>
         <div className='container'>
-          <h1 className='title has-text-white'>{props.title}</h1>
+          <h1 className='title is-size-1 has-text-white is-uppercase'>{props.title}</h1>
           {props.subtitle && <h2 className='subtitle is-size-2 has-text-white-bis'>{props.subtitle}</h2>}
         </div>
       </div>

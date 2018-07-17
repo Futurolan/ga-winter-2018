@@ -15,6 +15,13 @@ npm install
 npm dev
 ```
 
+## ARGS
+- BASE_URL : https://test.gamers-assembly.com 
+- BACKEND_API_URL: https://backoffice.gamers-assembly.com
+- EDITION_ID: Nid of the edition on drupal 
+- CONTACT_PAGE_ID: Nid of the Contact Page Node on drupal
+- PRESSE_PAGE_ID: Nid of the Presse Page Node on drupal
+- LEGALS_PAGE_ID: Nid of the Legals Page Node on drupal
 
 ## Reminder
 - Change lib/config.js

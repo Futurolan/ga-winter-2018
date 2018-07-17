@@ -7,8 +7,8 @@ class TournoisPage extends React.Component {
   render () {
     return (
       <Layout name='tournois-page has-bg-star'>
-        <Meta title='Tournois' />
         <div className='section'>
+          <Meta title='Tournois' />
           <div className='container'>
             <h1 className='title'>Tournois</h1>
             //TODO la liste des tournois

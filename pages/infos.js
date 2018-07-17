@@ -7,8 +7,8 @@ class InfosPage extends React.Component {
   render () {
     return (
       <Layout name='infos-page has-bg-star'>
-        <Meta title='Informations pratiques' />
         <div className='section'>
+          <Meta title='Informations pratiques' />
           <div className='container'>
             <h1 className='title'>Informations pratiques</h1>
             //TODO les informations pratiques

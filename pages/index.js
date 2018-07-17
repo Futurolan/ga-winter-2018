@@ -16,7 +16,6 @@ class HomePage extends React.Component {
           <Hero title={'Gamers Assembly'} subtitle={'Halloween Edition 2018 '} imgUrl={'/static/img/bg-orange-area.jpg'} />
           <HomeInfoBlocks />
           <HomeNewsList />
-          {/* <PartnersCarousel /> */}
         </div>
       </Layout>
     )

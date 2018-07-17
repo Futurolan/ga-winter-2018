@@ -7,8 +7,8 @@ class PartenairesPage extends React.Component {
   render () {
     return (
       <Layout name='partenaires-page has-bg-star'>
-        <Meta title='Partenaires' />
         <div className='section'>
+          <Meta title='Partenaires' />
           <div className='container'>
             <h1 className='title'>Partenaires</h1>
             //TODO la liste des partenaires

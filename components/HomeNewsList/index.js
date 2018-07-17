@@ -42,7 +42,7 @@ function HomeNewsList ({
                   </div>
                 ))}
               </div>
-              <Link href='/news' ><a className='button is-primary is-medium' >Voir plus</a></Link>
+              <Link href='/news' ><a className='button is-primary is-medium' >Voir plus d'actualités</a></Link>
 
             </div>
             <div className='column is-5-desktop is-12-tablet'>
