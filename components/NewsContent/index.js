@@ -15,12 +15,18 @@ function NewsContent ({data: { loading, error, node }}) {
       <section className='section'>
 
         <div className='container'>
+          <h1 className='title title-line has-text-centered'><span>{node.title}</span></h1>
+
           <figure className='image is-5by1'>
             <img srcSet={`${node.image.mobile.url} 705w, ${node.image.desktop.url} 960w, ${node.image.widescreen.url} 1155w, ${node.image.fullhd.url} 1345w`} />
           </figure>
-          <div className='is-pulled-right'> Créé le <Moment unix format='DD/MM/YYYY à HH:SS'>{node.created}</Moment>, par {node.entityOwner.name}</div>
+          <div className='level'>
+            <div className='level-left' />
+            <div className='level-right'>
+              <div className='level-item'> Créé le <Moment unix format='DD/MM/YYYY à HH:SS'>{node.created}</Moment>, par {node.entityOwner.name}</div>
+            </div>
+          </div>
           <div className='content has-text-justified' >
-            <h1 className='title '> {node.title}</h1>
             <div dangerouslySetInnerHTML={{__html: node.content.processed}} />
           </div>
         </div>

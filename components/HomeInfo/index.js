@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.scss'
 
 const HomeInfo = () => (
-  <div className='ga-home-info'>
+  <div className='ga-home-info has-bg-grey-area'>
     <section className='section is-medium'>
       <div className='container'>
 

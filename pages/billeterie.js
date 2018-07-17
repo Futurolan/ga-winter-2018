@@ -6,7 +6,7 @@ import '../styles/styles.scss'
 class BilleteriePage extends React.Component {
   render () {
     return (
-      <Layout name='billeterie-page'>
+      <Layout name='billeterie-page has-bg-star'>
         <Meta title='Billeterie' />
         <div className='section'>
           <div className='container'>

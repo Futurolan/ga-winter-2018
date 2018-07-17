@@ -13,7 +13,7 @@ function HomeNewsList ({
   if (error) return <div>Error Loading Post</div>
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length) {
-    return <div className='ga-home-news-list'>
+    return <div className='ga-home-news-list has-bg-star'>
       <section className='section'>
         <div className='container'>
 

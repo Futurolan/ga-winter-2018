@@ -6,7 +6,7 @@ import '../styles/styles.scss'
 class InfosPage extends React.Component {
   render () {
     return (
-      <Layout name='infos-page'>
+      <Layout name='infos-page has-bg-star'>
         <Meta title='Informations pratiques' />
         <div className='section'>
           <div className='container'>
