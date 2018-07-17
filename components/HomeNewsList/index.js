@@ -62,11 +62,13 @@ function HomeNewsList ({
 
 export const news = gql`
 {
-  nodeQuery(filter:{
-  conditions:[
-    {field:"field_news_editions",value:["${process.env.EDITION_ID}"]},
-    {field:"type",value:["news"],operator:EQUAL}
-  ]},
+  nodeQuery(
+  filter:{
+    conditions:[
+      {field:"field_news_editions",value:["${process.env.EDITION_ID}"]},
+      {field:"type",value:["news"],operator:EQUAL},
+      {field:"status",value:[1]}]}
+    ]},
   sort:[{field:"created",direction:DESC}],
   limit:4) {
     entities {
