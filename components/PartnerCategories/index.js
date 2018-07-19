@@ -8,7 +8,7 @@ class PartnerCategories extends React.Component {
     for (const index in this.props.partners) {
       const partner = this.props.partners[index]
       if (partner.category.entity.nid === categoryId) {
-        buildPartners.push(<div key={partner.nid} className='column is-2'><PartnerLogo
+        buildPartners.push(<div key={partner.nid} className='column is-2-desktop is-4-tablet'><PartnerLogo
           imageUrl={partner.image.derivative.url} url={partner.url} /></div>)
       }
     }
@@ -22,11 +22,11 @@ class PartnerCategories extends React.Component {
       const buildPartners = this.createPartners(category.nid)
       if (buildPartners.length > 0) {
         buildCategories.push(
-          <div key={category.nid} >
-            <h2 className='category title title-line is-size-5 has-text-weight-light is-italic'>
+          <div key={category.nid} className='section'>
+            <h2 className='category title is-size-5 has-text-weight-light is-italic'>
               <span>{category.title}</span>
             </h2>
-            <div className='columns is-multiline is-vcentered is-centered'>
+            <div className='columns is-multiline is-vcentered is-centered '>
               {buildPartners}
             </div>
           </div>)
