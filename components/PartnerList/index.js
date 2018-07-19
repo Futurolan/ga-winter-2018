@@ -10,7 +10,7 @@ function PartnerList ({
   partners: {loading2, error2, nodeQuery: partners}
 
 }) {
-  if (error) {
+  if (error || error2) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des partenaires !!!</div>
   }
 

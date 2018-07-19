@@ -10,8 +10,8 @@ class PartenairesPage extends React.Component {
       <Layout name='partenaires-page has-bg-star'>
         <div className='section'>
           <Meta title='Partenaires' />
-          <div className='container'>
-            <h1 className='title'>Partenaires</h1>
+          <div className='container has-text-centered'>
+            <h1 className='title title-line'><span>Partenaires</span></h1>
             <PartnerList />
           </div>
         </div>
