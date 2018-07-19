@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Meta from 'components/Meta'
+import PartnerList from 'components/PartnerList'
 import '../styles/styles.scss'
 
 class PartenairesPage extends React.Component {
@@ -11,7 +12,7 @@ class PartenairesPage extends React.Component {
           <Meta title='Partenaires' />
           <div className='container'>
             <h1 className='title'>Partenaires</h1>
-            //TODO la liste des partenaires
+            <PartnerList />
           </div>
         </div>
       </Layout>

@@ -4,7 +4,7 @@ EXPOSE 3000
 
 ARG EDITION_ID=1
 ARG BACKEND_API_URL=https://backoffice.gamers-assembly.net
-ARG BACKEND_LOCAL_API_URL=http://localhost:3000
+ARG BACKEND_LOCAL_API_URL=http://localhost:8080
 ARG BASE_URL=https://test.gamers-assembly.net
 ARG CONTACT_PAGE_ID=6
 ARG PRESSE_PAGE_ID=7
