@@ -8,7 +8,7 @@ function NewsList ({
   data: { loading, error, nodeQuery }, loadMoreNews
 }) {
   if (error) {
-    return <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des actualités !!!</div>
+    return <div className='notification is-danger'>Une erreur est survenue pendant le chargement des actualités !!!</div>
   }
 
   if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length > 0) {

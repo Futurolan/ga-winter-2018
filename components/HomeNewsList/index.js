@@ -13,7 +13,7 @@ function HomeNewsList ({
     return <div className='ga-home-news-list has-bg-star'>
       <section className='section'>
         <div className='container'>
-          <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des actualités !!!</div>
+          <div className='notification is-danger'>Une erreur est survenue pendant le chargement des actualités !!!</div>
         </div>
       </section>
     </div>

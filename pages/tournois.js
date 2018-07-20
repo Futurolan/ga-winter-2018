@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Meta from 'components/Meta'
+import TournamentList from 'components/TournamentList'
 import '../styles/styles.scss'
 
 class TournoisPage extends React.Component {
@@ -11,7 +12,7 @@ class TournoisPage extends React.Component {
           <Meta title='Tournois' />
           <div className='container'>
             <h1 className='title'>Tournois</h1>
-            //TODO la liste des tournois
+            <TournamentList />
           </div>
         </div>
       </Layout>

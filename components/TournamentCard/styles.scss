@@ -1,4 +1,4 @@
-.ga-news-card{
+.ga-tournament-card{
   display:flex;
   flex-direction: column;
   height: 100%;
@@ -6,8 +6,10 @@
   transition: all 0.3s;
 
   .ribbon{
-    opacity:0.6;
-    border:none
+    opacity:0.7;
+    border:none;
+    top:0;
+    background-color:#000000;
   }
 
   &:hover{

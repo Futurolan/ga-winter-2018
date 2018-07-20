@@ -11,7 +11,7 @@ function PartnerList ({
 
 }) {
   if (error || error2) {
-    return <div className='notification is-danger'>Une erreur est survenue pendant le chargemet des partenaires !!!</div>
+    return <div className='notification is-danger'>Une erreur est survenue pendant le chargement des partenaires !!!</div>
   }
 
   if (partnerCategories && partnerCategories.entities && partnerCategories.entities.length > 0 && partners && partners.entities && partners.entities.length > 0) {
