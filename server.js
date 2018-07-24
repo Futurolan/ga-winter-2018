@@ -22,6 +22,10 @@ app.prepare()
     server.get('/news/:nid', (req, res) => {
       return app.render(req, res, '/news-single', { nid: req.params.nid })
     })
+  
+    server.get('/tournament/:nid', (req, res) => {
+      return app.render(req, res, '/tournament-single', { nid: req.params.nid })
+    })
 
     server.get('*', (req, res) => {
       return handle(req, res)

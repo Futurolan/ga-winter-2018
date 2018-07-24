@@ -11,7 +11,7 @@ class TournoisPage extends React.Component {
         <div className='section'>
           <Meta title='Tournois' />
           <div className='container'>
-            <h1 className='title'>Tournois</h1>
+            <h1 className='title title-line has-text-centered'><span>Tournois</span></h1>
             <TournamentList />
           </div>
         </div>

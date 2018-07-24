@@ -4,7 +4,7 @@ import Meta from 'components/Meta'
 import '../styles/styles.scss'
 import config from '../lib/config'
 
-class ContactsPage extends React.Component {
+class RecrutementPage extends React.Component {
   render () {
     const formUrl = 'https://goo.gl/forms/84pHQfSp50RcuUel2'
     return (
@@ -25,4 +25,4 @@ class ContactsPage extends React.Component {
   }
 }
 
-export default ContactsPage
+export default RecrutementPage

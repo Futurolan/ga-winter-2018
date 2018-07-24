@@ -55,19 +55,19 @@ class Header extends React.Component {
               <div className='navbar-item'>
                 <div className='field is-grouped'>
                   <a className='control has-text-white' target='_blank' href='https://www.facebook.com/GamersAssembly'>
-                    <i className='fa fa-facebook-official' />
+                    <i className='fab fa-facebook' />
                   </a>
                   <a className='control has-text-white' target='_blank' href='https://twitter.com/GamersAssembly'>
-                    <i className='fa fa-twitter' />
+                    <i className='fab fa-twitter' />
                   </a>
                   <a className='control has-text-white' target='_blank' href='https://www.flickr.com/photos/futurolan'>
-                    <i className='fa fa-flickr' />
+                    <i className='fab fa-flickr' />
                   </a>
                   <a className='control has-text-white' target='_blank' href='https://twitch.tv/gamers_assembly'>
-                    <i className='fa fa-twitch' />
+                    <i className='fab fa-twitch' />
                   </a>
                   <a className='control has-text-white' target='_blank' href='https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'>
-                    <i className='fa fa-youtube-play' />
+                    <i className='fab fa-youtube' />
                   </a>
                 </div>
               </div>

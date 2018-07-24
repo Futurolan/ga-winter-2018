@@ -1,5 +1,8 @@
-$fa-font-path:   "/static/fonts";
-@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+$fa-font-path:  "/static/fonts";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';
 
 @import "color";
 $family-sans-serif: "Lato", sans-serif;
@@ -17,6 +20,7 @@ $family-sans-serif: "Lato", sans-serif;
 .main {
   flex: 1;
 }
+
 
 
 body:after{
