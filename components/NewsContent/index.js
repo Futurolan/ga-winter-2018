@@ -8,7 +8,7 @@ import Meta from '../Meta'
 import SocialNetworkLinks from '../SocialNetworkLinks'
 
 function NewsContent ({data: { loading, error, node }}) {
-  if (error) {
+  if (error || (node && node.type.id !== 'news')) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement de l'actualité !!!</div>
   }
 
@@ -43,6 +43,9 @@ export const news = gql`
 
   query news($nid:String!) {
     node:nodeById(id: $nid) {
+      type {
+        id:targetId
+      }
       ... on NodeNews {
         title
         entityOwner {

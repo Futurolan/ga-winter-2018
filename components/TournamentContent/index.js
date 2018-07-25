@@ -11,7 +11,7 @@ import Meta from '../Meta'
 import './styles.scss'
 
 function TournamentContent ({data: { loading, error, node }}) {
-  if (error || (node && node.edition.nid !== parseInt(process.env.EDITION_ID))) {
+  if (error || (node && node.type.id !== 'tournament') || (node && node.edition.nid !== parseInt(process.env.EDITION_ID))) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement du tournoi !!!</div>
   }
 
@@ -31,7 +31,7 @@ function TournamentContent ({data: { loading, error, node }}) {
       <div className='tags'>
         <span className='tag is-dark'>{node.game.node.editor}</span>
         <span className='tag is-dark'><GameType type={node.game.node.type} /></span>
-        <span className='tag is-dark'><TournamentType type={node.type} /></span>
+        <span className='tag is-dark'><TournamentType type={node.tournamentType} /></span>
         <span className='tag is-dark'><Platform platform={node.platform} /></span>
       </div>
 
@@ -107,9 +107,12 @@ export const tournament = gql`
 
   query tournament($nid:String!) {
     node:nodeById(id: $nid) {
+      type {
+        id:targetId
+      }
       ... on NodeTournament {
         title
-        type:fieldTournamentType
+        tournamentType:fieldTournamentType
         platform:fieldTournamentPlatform
         format:fieldTournamentFormat
         cashPrizeTitle:fieldTournamentCashprizeTitle
