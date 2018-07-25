@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 import PropTypes from 'prop-types'
-import PartnerCategories from 'components/PartnerCategories'
+import PartnerCategories from '../PartnerCategories'
 
 function PartnerList ({
 

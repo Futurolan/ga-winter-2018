@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import TournamentSlotProgress from 'components/TournamentSlotProgress'
-import Platform from 'components/Platform'
-import PegiLogo from 'components/PegiLogo'
+import TournamentSlotProgress from '../TournamentSlotProgress'
+import Platform from '../Platform'
+import PegiLogo from '../PegiLogo'
 import './styles.scss'
 
 const TournamentCard = (props) => (

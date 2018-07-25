@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ActiveLink from 'components/ActiveLink'
+import ActiveLink from '../ActiveLink'
 
 import './styles.scss'
 

@@ -4,8 +4,8 @@ import gql from 'graphql-tag'
 import PropTypes from 'prop-types'
 import './styles.scss'
 import Moment from 'react-moment'
-import Meta from 'components/Meta'
-import SocialNetworkLinks from 'components/SocialNetworkLinks'
+import Meta from '../Meta'
+import SocialNetworkLinks from '../SocialNetworkLinks'
 
 function NewsContent ({data: { loading, error, node }}) {
   if (error) {

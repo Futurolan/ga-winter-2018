@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'react-apollo'
 import Link from 'next/link'
 import gql from 'graphql-tag'
-import NewsCard from 'components/NewsCard'
+import NewsCard from '..//NewsCard'
 import PropTypes from 'prop-types'
 import { Timeline } from 'react-twitter-widgets'
 

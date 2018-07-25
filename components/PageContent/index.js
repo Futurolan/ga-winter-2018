@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import PropTypes from 'prop-types'
-import Meta from 'components/Meta'
+import Meta from '../Meta'
 
 function PageContent ({data: { loading, error, node }}) {
   if (error) {

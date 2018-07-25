@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import NewsCard from 'components/NewsCard'
+import NewsCard from '../NewsCard'
 import PropTypes from 'prop-types'
 
 function NewsList ({
