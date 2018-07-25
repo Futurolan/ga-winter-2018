@@ -6,16 +6,18 @@ import PegiLogo from '../PegiLogo'
 import GameType from '../GameType'
 import TournamentType from '../TournamentType'
 import Platform from '../Platform'
+import Meta from '../Meta'
 
 import './styles.scss'
 
 function TournamentContent ({data: { loading, error, node }}) {
-  if (error) {
+  if (error || (node && node.edition.nid !== parseInt(process.env.EDITION_ID))) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement du tournoi !!!</div>
   }
 
   if (node) {
     return <div className='ga-tournament-content'>
+      <Meta title={node.title} image={node.image ? node.image.fullhd.url : node.game.node.image.fullhd.url} description={`Toutes les informations relative au tournoi ${node.title}`} />
 
       <h1 className='title title-line has-text-centered'><span>{node.title}</span></h1>
       <div className='ga-tournament-content-image'>
@@ -160,6 +162,9 @@ export const tournament = gql`
               }
             }
           }
+        }
+        edition:fieldTournamentEdition{
+          nid:targetId
         }
       }
     }
