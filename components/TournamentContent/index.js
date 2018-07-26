@@ -44,7 +44,7 @@ function TournamentContent ({data: { loading, error, node }}) {
             <p className='panel-heading has-background-primary has-text-white'>
               <i className='fas fa-calendar-alt' />&nbsp;&nbsp;Planning
             </p>
-            <div className='panel-block'>
+            <div className='panel-block has-background-white'>
               <div dangerouslySetInnerHTML={{__html: node.planning.value}} />
             </div>
           </div>
@@ -57,7 +57,7 @@ function TournamentContent ({data: { loading, error, node }}) {
             <p className='panel-heading has-background-primary has-text-white'>
               <i className='fas fa-ruler' />&nbsp;&nbsp;Format
             </p>
-            <div className='panel-block'>
+            <div className='panel-block has-background-white'>
               <div dangerouslySetInnerHTML={{__html: node.format}} />
             </div>
           </div>

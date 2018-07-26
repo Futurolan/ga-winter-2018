@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from 'components/Layout'
 import Meta from 'components/Meta'
+import InfosContent from 'components/InfosContent'
 import '../styles/styles.scss'
 
 class InfosPage extends React.Component {
@@ -10,8 +11,8 @@ class InfosPage extends React.Component {
         <div className='section'>
           <Meta title='Informations pratiques' />
           <div className='container'>
-            <h1 className='title'>Informations pratiques</h1>
-            //TODO les informations pratiques
+            <h1 className='title title-line has-text-centered'><span>Informations pratiques</span></h1>
+            <InfosContent />
           </div>
         </div>
       </Layout>

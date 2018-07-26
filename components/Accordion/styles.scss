@@ -1,0 +1,11 @@
+.ga-accordion{
+  .panel-heading{
+    cursor:pointer;
+  }
+  .panel-block{
+    display:none;
+    &.is-open{
+      display:block;
+    }
+  }
+}
