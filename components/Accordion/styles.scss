@@ -3,9 +3,9 @@
     cursor:pointer;
   }
   .panel-block{
-    display:none;
-    &.is-open{
-      display:block;
+    display:block;
+    &.is-close{
+      display: none;
     }
   }
 }
