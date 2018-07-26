@@ -21,7 +21,7 @@ class Accordion extends React.Component {
 
     return (
       <div className='ga-accordion panel'>
-        <p className='panel-heading has-background-primary' onClick={this.toggleMenu}>
+        <div className='panel-heading has-background-primary' onClick={this.toggleMenu}>
           <div className='level'>
             <div className='level-left'>
               <div className='level-item'>
@@ -35,7 +35,7 @@ class Accordion extends React.Component {
               </div>
             </div>
           </div>
-        </p>
+        </div>
         <div className={classNames('panel-block', 'has-background-white', {'is-open': this.state.isOpen})}>
           <p className='content' dangerouslySetInnerHTML={{__html: text}} />
         </div>
