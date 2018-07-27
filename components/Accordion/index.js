@@ -7,14 +7,9 @@ import './styles.scss'
 class Accordion extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {isOpen: true}
+    this.state = {isOpen: false}
 
     this.toggleMenu = this.toggleMenu.bind(this)
-  }
-
-  componentDidMount () {
-    console.log('ici')
-    this.setState({isOpen: false})
   }
 
   toggleMenu () {
@@ -41,8 +36,8 @@ class Accordion extends React.Component {
             </div>
           </div>
         </div>
-        <div className={classNames('panel-block', 'has-background-white', {'is-open': this.state.isOpen})}>
-          <p className='content' dangerouslySetInnerHTML={{__html: text}} />
+        <div className={classNames('panel-block', 'has-background-white', 'content', {'is-open': this.state.isOpen})}>
+          <div dangerouslySetInnerHTML={{__html: text}} />
         </div>
       </div>
     )

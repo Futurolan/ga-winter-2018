@@ -3,9 +3,12 @@
     cursor:pointer;
   }
   .panel-block{
-    display:none;
+    height:0;
+    padding:0;
+    overflow: hidden;
     &.is-open{
-      display: block;
+      height:auto;
+      padding:1rem;
     }
   }
 }
