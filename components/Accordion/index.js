@@ -7,13 +7,18 @@ import './styles.scss'
 class Accordion extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {isClose: true}
+    this.state = {isOpen: true}
 
     this.toggleMenu = this.toggleMenu.bind(this)
   }
+  
+  componentDidMount () {
+    console.log('ici')
+    this.setState({isOpen: false})
+  }
 
   toggleMenu () {
-    this.setState({isClose: !this.state.isClose})
+    this.setState({isOpen: !this.state.isOpen})
   }
 
   render () {
@@ -30,13 +35,13 @@ class Accordion extends React.Component {
             </div>
             <div className='level-right'>
               <div className='level-item has-text-white'>
-                {!this.state.isClose && <i className='fas fa-caret-up' />}
-                {this.state.isClose && <i className='fas fa-caret-down' />}
+                {this.state.isOpen && <i className='fas fa-caret-up' />}
+                {!this.state.isOpen && <i className='fas fa-caret-down' />}
               </div>
             </div>
           </div>
         </div>
-        <div className={classNames('panel-block', 'has-background-white', {'is-close': this.state.isClose})}>
+        <div className={classNames('panel-block', 'has-background-white', {'is-open': this.state.isOpen})}>
           <p className='content' dangerouslySetInnerHTML={{__html: text}} />
         </div>
       </div>
