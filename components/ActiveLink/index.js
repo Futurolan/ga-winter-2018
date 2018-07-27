@@ -10,7 +10,7 @@ class ActiveLink extends React.Component {
     const {label, path, className} = this.props
     return (
       <Link href={path}>
-        <a className={classNames(className, {'is-active': pathname === path})}>{label}</a>
+        <a className={classNames(className, {'has-text-grey-lighter': pathname === path})}>{label}</a>
       </Link>
     )
   }
