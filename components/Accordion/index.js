@@ -11,7 +11,7 @@ class Accordion extends React.Component {
 
     this.toggleMenu = this.toggleMenu.bind(this)
   }
-  
+
   componentDidMount () {
     console.log('ici')
     this.setState({isOpen: false})
