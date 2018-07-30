@@ -43,8 +43,14 @@ export const news = gql`
 query post($skip:Int!){
   nodeQuery(
   filter:{
+    groups: [{
+      conjunction: OR,
+      conditions: [
+        {field: "field_news_editions", operator: IS_NULL},
+        {field: "field_news_editions", value: ["${process.env.EDITION_ID}"]}
+      ]
+    }],
     conditions:[
-      {field:"field_news_editions",value:["${process.env.EDITION_ID}"]},
       {field:"type",value:["news"],operator:EQUAL},
       {field:"status",value:["1"]}
     ]},
