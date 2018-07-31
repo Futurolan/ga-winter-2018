@@ -14,7 +14,15 @@ var config = {
   },
   partners: {
     title: 'Partenaires',
-    description: 'Retrouvez la liste de tous nos partenaires '
+    description: 'Retrouvez la liste de tous nos partenaires'
+  },
+  tournaments: {
+    title: 'Tournois',
+    description: 'Tous les tournois de la Gamers Assembly Halloween Edition 2018'
+  },
+  infos: {
+    title: 'Informations pratiques',
+    description: 'Toutes les informations sur cet évènement'
   }
 };
 

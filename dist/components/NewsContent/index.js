@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.news = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\n  query news($nid:String!) {\n    node:nodeById(id: $nid) {\n      ... on NodeNews {\n        title\n        entityOwner {\n          name\n        }\n        created,\n        content:fieldNewsContent{\n          processed\n        }\n        description:fieldNewsDescription\n        image:fieldNewsImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n      }\n    }\n  }\n\n'], ['\n\n  query news($nid:String!) {\n    node:nodeById(id: $nid) {\n      ... on NodeNews {\n        title\n        entityOwner {\n          name\n        }\n        created,\n        content:fieldNewsContent{\n          processed\n        }\n        description:fieldNewsDescription\n        image:fieldNewsImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n      }\n    }\n  }\n\n']);
+var _templateObject = _taggedTemplateLiteral(['\n\n  query news($nid:String!) {\n    node:nodeById(id: $nid) {\n      type {\n        id:targetId\n      }\n      ... on NodeNews {\n        title\n        entityOwner {\n          name\n        }\n        created,\n        content:fieldNewsContent{\n          processed\n        }\n        description:fieldNewsDescription\n        image:fieldNewsImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n      }\n    }\n  }\n\n'], ['\n\n  query news($nid:String!) {\n    node:nodeById(id: $nid) {\n      type {\n        id:targetId\n      }\n      ... on NodeNews {\n        title\n        entityOwner {\n          name\n        }\n        created,\n        content:fieldNewsContent{\n          processed\n        }\n        description:fieldNewsDescription\n        image:fieldNewsImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n      }\n    }\n  }\n\n']);
 
 var _react = require('react');
 
@@ -45,7 +45,7 @@ function NewsContent(_ref) {
       error = _ref$data.error,
       node = _ref$data.node;
 
-  if (error) {
+  if (error || node && node.type.id !== 'news') {
     return _react2.default.createElement(
       'div',
       { className: 'notification is-danger' },

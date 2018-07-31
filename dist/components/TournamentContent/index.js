@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.tournament = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\n  query tournament($nid:String!) {\n    node:nodeById(id: $nid) {\n      ... on NodeTournament {\n        title\n        type:fieldTournamentType\n        platform:fieldTournamentPlatform\n        format:fieldTournamentFormat\n        cashPrizeTitle:fieldTournamentCashprizeTitle\n        cashPrizeLines:fieldTournamentCashprizeLines\n        description:fieldTournamentDescription{\n          value:processed\n        }\n        planning:fieldTournamentPlanning{\n          value:processed\n        }\n        rules:fieldTournamentRules{\n          description\n          entity{\n            ... on File{\n              url\n            }\n          }\n        }\n        image:fieldTournamentImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n        game:fieldTournamentGame{\n          node:entity{\n            pegi:fieldGamePegi\n            editor:fieldGameEditor\n            type:fieldGameType\n            image:fieldGameImage{\n              mobile:derivative(style:CROP_5_1_705X141){\n                url\n              }\n              desktop:derivative(style:CROP_5_1_960X192){\n                url\n              }\n              widescreen:derivative(style:CROP_5_1_1155X231){\n                url\n              }\n              fullhd:derivative(style:CROP_5_1_1345X269){\n                url\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n'], ['\n\n  query tournament($nid:String!) {\n    node:nodeById(id: $nid) {\n      ... on NodeTournament {\n        title\n        type:fieldTournamentType\n        platform:fieldTournamentPlatform\n        format:fieldTournamentFormat\n        cashPrizeTitle:fieldTournamentCashprizeTitle\n        cashPrizeLines:fieldTournamentCashprizeLines\n        description:fieldTournamentDescription{\n          value:processed\n        }\n        planning:fieldTournamentPlanning{\n          value:processed\n        }\n        rules:fieldTournamentRules{\n          description\n          entity{\n            ... on File{\n              url\n            }\n          }\n        }\n        image:fieldTournamentImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n        game:fieldTournamentGame{\n          node:entity{\n            pegi:fieldGamePegi\n            editor:fieldGameEditor\n            type:fieldGameType\n            image:fieldGameImage{\n              mobile:derivative(style:CROP_5_1_705X141){\n                url\n              }\n              desktop:derivative(style:CROP_5_1_960X192){\n                url\n              }\n              widescreen:derivative(style:CROP_5_1_1155X231){\n                url\n              }\n              fullhd:derivative(style:CROP_5_1_1345X269){\n                url\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n']);
+var _templateObject = _taggedTemplateLiteral(['\n\n  query tournament($nid:String!) {\n    node:nodeById(id: $nid) {\n      type {\n        id:targetId\n      }\n      ... on NodeTournament {\n        title\n        tournamentType:fieldTournamentType\n        platform:fieldTournamentPlatform\n        format:fieldTournamentFormat\n        cashPrizeTitle:fieldTournamentCashprizeTitle\n        cashPrizeLines:fieldTournamentCashprizeLines\n        description:fieldTournamentDescription{\n          value:processed\n        }\n        planning:fieldTournamentPlanning{\n          value:processed\n        }\n        rules:fieldTournamentRules{\n          description\n          entity{\n            ... on File{\n              url\n            }\n          }\n        }\n        image:fieldTournamentImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n        game:fieldTournamentGame{\n          node:entity{\n            pegi:fieldGamePegi\n            editor:fieldGameEditor\n            type:fieldGameType\n            image:fieldGameImage{\n              mobile:derivative(style:CROP_5_1_705X141){\n                url\n              }\n              desktop:derivative(style:CROP_5_1_960X192){\n                url\n              }\n              widescreen:derivative(style:CROP_5_1_1155X231){\n                url\n              }\n              fullhd:derivative(style:CROP_5_1_1345X269){\n                url\n              }\n            }\n          }\n        }\n        edition:fieldTournamentEdition{\n          nid:targetId\n        }\n      }\n    }\n  }\n\n'], ['\n\n  query tournament($nid:String!) {\n    node:nodeById(id: $nid) {\n      type {\n        id:targetId\n      }\n      ... on NodeTournament {\n        title\n        tournamentType:fieldTournamentType\n        platform:fieldTournamentPlatform\n        format:fieldTournamentFormat\n        cashPrizeTitle:fieldTournamentCashprizeTitle\n        cashPrizeLines:fieldTournamentCashprizeLines\n        description:fieldTournamentDescription{\n          value:processed\n        }\n        planning:fieldTournamentPlanning{\n          value:processed\n        }\n        rules:fieldTournamentRules{\n          description\n          entity{\n            ... on File{\n              url\n            }\n          }\n        }\n        image:fieldTournamentImage{\n          mobile:derivative(style:CROP_5_1_705X141){\n            url\n          }\n          desktop:derivative(style:CROP_5_1_960X192){\n            url\n          }\n          widescreen:derivative(style:CROP_5_1_1155X231){\n            url\n          }\n          fullhd:derivative(style:CROP_5_1_1345X269){\n            url\n          }\n        }\n        game:fieldTournamentGame{\n          node:entity{\n            pegi:fieldGamePegi\n            editor:fieldGameEditor\n            type:fieldGameType\n            image:fieldGameImage{\n              mobile:derivative(style:CROP_5_1_705X141){\n                url\n              }\n              desktop:derivative(style:CROP_5_1_960X192){\n                url\n              }\n              widescreen:derivative(style:CROP_5_1_1155X231){\n                url\n              }\n              fullhd:derivative(style:CROP_5_1_1345X269){\n                url\n              }\n            }\n          }\n        }\n        edition:fieldTournamentEdition{\n          nid:targetId\n        }\n      }\n    }\n  }\n\n']);
 
 var _react = require('react');
 
@@ -37,6 +37,10 @@ var _Platform = require('../Platform');
 
 var _Platform2 = _interopRequireDefault(_Platform);
 
+var _Meta = require('../Meta');
+
+var _Meta2 = _interopRequireDefault(_Meta);
+
 require('./styles.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,7 +53,7 @@ function TournamentContent(_ref) {
       error = _ref$data.error,
       node = _ref$data.node;
 
-  if (error) {
+  if (error || node && node.type.id !== 'tournament' || node && node.edition.nid !== parseInt(process.env.EDITION_ID)) {
     return _react2.default.createElement(
       'div',
       { className: 'notification is-danger' },
@@ -61,6 +65,7 @@ function TournamentContent(_ref) {
     return _react2.default.createElement(
       'div',
       { className: 'ga-tournament-content' },
+      _react2.default.createElement(_Meta2.default, { title: node.title, image: node.image ? node.image.fullhd.url : node.game.node.image.fullhd.url, description: 'Toutes les informations relative au tournoi ' + node.title }),
       _react2.default.createElement(
         'h1',
         { className: 'title title-line has-text-centered' },
@@ -100,7 +105,7 @@ function TournamentContent(_ref) {
         _react2.default.createElement(
           'span',
           { className: 'tag is-dark' },
-          _react2.default.createElement(_TournamentType2.default, { type: node.type })
+          _react2.default.createElement(_TournamentType2.default, { type: node.tournamentType })
         ),
         _react2.default.createElement(
           'span',
@@ -130,7 +135,7 @@ function TournamentContent(_ref) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'panel-block' },
+              { className: 'panel-block has-background-white' },
               _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: node.planning.value } })
             )
           )
@@ -158,7 +163,7 @@ function TournamentContent(_ref) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'panel-block' },
+              { className: 'panel-block has-background-white' },
               _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: node.format } })
             )
           ),

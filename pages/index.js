@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from 'components/Layout'
 import Hero from 'components/Hero'
 import HomeNewsList from 'components/HomeNewsList'
-import HomeInfoBlocks from 'components/HomeInfo'
+import HomeInfoBlocks from 'components/HomeInfo/index'
 import Meta from 'components/Meta'
 import '../styles/styles.scss'
 

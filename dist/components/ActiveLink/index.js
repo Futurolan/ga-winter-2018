@@ -55,7 +55,7 @@ var ActiveLink = function (_React$Component) {
         { href: path },
         _react2.default.createElement(
           'a',
-          { className: (0, _classnames2.default)(className, { 'is-active': pathname === path }) },
+          { className: (0, _classnames2.default)(className, { 'has-text-grey-lighter': pathname === path }) },
           label
         )
       );
