@@ -9,13 +9,13 @@ import './styles.scss'
 class Header extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {isOpen: false}
+    this.state = { isOpen: false }
 
     this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   toggleMenu () {
-    this.setState({isOpen: !this.state.isOpen})
+    this.setState({ isOpen: !this.state.isOpen })
   }
   render () {
     return (
@@ -34,7 +34,7 @@ class Header extends React.Component {
               <span />
             </button>
           </div>
-          <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', {'is-active': this.state.isOpen})} >
+          <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', { 'is-active': this.state.isOpen })} >
             <div className='navbar-start' />
             <div className='navbar-item'>
               <ActiveLink label='Actualités' className='has-text-white is-uppercase has-text-weight-bold' path='/news' />

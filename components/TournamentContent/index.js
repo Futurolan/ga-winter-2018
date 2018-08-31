@@ -7,10 +7,11 @@ import GameType from '../GameType'
 import TournamentType from '../TournamentType'
 import Platform from '../Platform'
 import Meta from '../Meta'
+import WeezeventPlayerList from '../WeezeventPlayersList'
 
 import './styles.scss'
 
-function TournamentContent ({data: { loading, error, node }}) {
+function TournamentContent ({ data: { loading, error, node } }) {
   if (error || (node && node.type.id !== 'tournament') || (node && node.edition.nid !== parseInt(process.env.EDITION_ID))) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement du tournoi !!!</div>
   }
@@ -38,16 +39,17 @@ function TournamentContent ({data: { loading, error, node }}) {
       <div className='columns'>
         <div className='column is-8'>
           <div className='content has-text-justified' >
-            <div dangerouslySetInnerHTML={{__html: node.description.value}} />
+            <div dangerouslySetInnerHTML={{ __html: node.description.value }} />
           </div>
           <div className='panel'>
             <p className='panel-heading has-background-primary has-text-white'>
               <i className='fas fa-calendar-alt' />&nbsp;&nbsp;Planning
             </p>
             <div className='panel-block has-background-white'>
-              <div dangerouslySetInnerHTML={{__html: node.planning.value}} />
+              <div dangerouslySetInnerHTML={{ __html: node.planning.value }} />
             </div>
           </div>
+          <WeezeventPlayerList tournamentNid={node.nid.toString()} reservedSlot={node.reservedSlot} size={node.size} />
         </div>
         <div className='column is-4'>
           <div className='panel'>
@@ -58,7 +60,7 @@ function TournamentContent ({data: { loading, error, node }}) {
               <i className='fas fa-ruler' />&nbsp;&nbsp;Format
             </p>
             <div className='panel-block has-background-white'>
-              <div dangerouslySetInnerHTML={{__html: node.format}} />
+              <div dangerouslySetInnerHTML={{ __html: node.format }} />
             </div>
           </div>
           {node.cashPrizeTitle && node.cashPrizeLines.length > 0 &&
@@ -112,6 +114,7 @@ export const tournament = gql`
       }
       ... on NodeTournament {
         title
+        nid
         tournamentType:fieldTournamentType
         platform:fieldTournamentPlatform
         format:fieldTournamentFormat
@@ -169,6 +172,8 @@ export const tournament = gql`
         edition:fieldTournamentEdition{
           nid:targetId
         }
+        reservedSlot:fieldTournamentReservedSlot
+        size:fieldTournamentSize
       }
     }
   }
