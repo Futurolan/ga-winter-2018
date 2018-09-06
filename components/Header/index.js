@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import ActiveLink from '../ActiveLink'
 
 import './styles.scss'
+import TicketMenu from '../TicketMenu'
 
 class Header extends React.Component {
   constructor (props) {
@@ -39,9 +40,7 @@ class Header extends React.Component {
             <div className='navbar-item'>
               <ActiveLink label='Actualités' className='has-text-white is-uppercase has-text-weight-bold' path='/news' />
             </div>
-            {/* <div className='navbar-item'> */}
-            {/* <ActiveLink label='Billeterie' path='/billeterie' /> */}
-            {/* </div> */}
+            <TicketMenu />
             <div className='navbar-item is-uppercase has-text-weight-bold'>
               <ActiveLink label='Tournois' className='has-text-white' path='/tournois' />
             </div>

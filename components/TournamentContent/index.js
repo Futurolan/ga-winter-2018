@@ -10,6 +10,7 @@ import Meta from '../Meta'
 import WeezeventPlayerList from '../WeezeventPlayersList'
 
 import './styles.scss'
+import TicketButton from '../TicketButton'
 
 function TournamentContent ({ data: { loading, error, node } }) {
   if (error || (node && node.type.id !== 'tournament') || (node && node.edition.nid !== parseInt(process.env.EDITION_ID))) {
@@ -52,9 +53,7 @@ function TournamentContent ({ data: { loading, error, node } }) {
           <WeezeventPlayerList tournamentNid={node.nid.toString()} reservedSlot={node.reservedSlot} size={node.size} />
         </div>
         <div className='column is-4'>
-          <div className='panel'>
-            <div className='button is-primary is-fullwidth is-large'>Accéder à la billeterie</div>
-          </div>
+          <TicketButton />
           <div className='panel'>
             <p className='panel-heading has-background-primary has-text-white'>
               <i className='fas fa-ruler' />&nbsp;&nbsp;Format

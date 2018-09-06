@@ -23,50 +23,54 @@ function WeezeventPlayerList ({ size, reservedSlot, data: { loading, error, node
         <i className='fas fa-headset' />&nbsp;&nbsp;Inscrits {reservedSlot + countWeezevent}/{size}
       </p>
       {dataWeezevent.type === 'team' && <table className='table is-fullwidth'>
-        {[...Array(reservedSlot)].map((x, index) =>
-          <tr key={`reserved${index}`}>
-            <td>
-              <i className='fas fa-lock' />&nbsp;&nbsp;Slot réservé
-            </td>
-            <td />
-          </tr>
-        )}
-        {dataWeezevent.data.map((object, index) => (
-          <tr key={index}>
-            <td>
-              {object.name}
-            </td>
-            <td>
-              {object.players.sort().join(', ')}
-            </td>
-          </tr>
-        ))}
-        {/* {[...Array(size - reservedSlot - countWeezevent > 0 ? size - reservedSlot - countWeezevent : 0)].map((x, index) => */}
-        {/* <tr key={`free${index}`}> */}
-        {/* <td ><i className='fas fa-lock-open' />&nbsp;&nbsp;Slot libre</td> */}
-        {/* <td /> */}
-        {/* </tr> */}
-        {/* )} */}
+        <tbody>
+          {[...Array(reservedSlot)].map((x, index) =>
+            <tr key={`reserved${index}`}>
+              <td>
+                <i className='fas fa-lock' />&nbsp;&nbsp;Slot réservé
+              </td>
+              <td />
+            </tr>
+          )}
+          {dataWeezevent.data.map((object, index) => (
+            <tr key={index}>
+              <td>
+                {object.name}
+              </td>
+              <td>
+                {object.players.sort().join(', ')}
+              </td>
+            </tr>
+          ))}
+          {/* {[...Array(size - reservedSlot - countWeezevent > 0 ? size - reservedSlot - countWeezevent : 0)].map((x, index) => */}
+          {/* <tr key={`free${index}`}> */}
+          {/* <td ><i className='fas fa-lock-open' />&nbsp;&nbsp;Slot libre</td> */}
+          {/* <td /> */}
+          {/* </tr> */}
+          {/* )} */}
+        </tbody>
       </table>}
       {dataWeezevent.type === 'solo' && <table className='table is-fullwidth'>
-        {[...Array(reservedSlot)].map((x, index) =>
-          <tr key={`reserved${index}`}>
-            <td>
-              <i className='fas fa-lock' />&nbsp;&nbsp;Slot réservé
-            </td>
-            <td />
-          </tr>
-        )}
-        {dataWeezevent.data.map((object, index) => (
-          <tr key={index}>
-            <td>
-              {object.team}
-            </td>
-            <td>
-              {object.pseudo}
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {[...Array(reservedSlot)].map((x, index) =>
+            <tr key={`reserved${index}`}>
+              <td>
+                <i className='fas fa-lock' />&nbsp;&nbsp;Slot réservé
+              </td>
+              <td />
+            </tr>
+          )}
+          {dataWeezevent.data.map((object, index) => (
+            <tr key={index}>
+              <td>
+                {object.team}
+              </td>
+              <td>
+                {object.pseudo}
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>}
     </div>
   </div>
