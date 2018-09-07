@@ -13,7 +13,7 @@ class HomePage extends React.Component {
       <Layout name='home-page'>
         <div>
           <Meta title='Accueil' />
-          <Hero title={'Gamers Assembly'} subtitle={'Halloween Edition 2018 '} imgUrl={'/static/img/bg-orange-area.jpg'} />
+          <Hero title={'Gamers Assembly'} subtitle={'Winter Edition 2018 '} imgUrl={'/static/img/bg-orange-area.jpg'} />
           <HomeInfoBlocks />
           <HomeNewsList />
         </div>

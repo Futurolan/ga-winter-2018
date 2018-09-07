@@ -1,5 +1,5 @@
-# Gamers Assemby Halloween Edition 2018 Front
-This repository contain the Gamers Assembly Halloween Edition 2018 website frontend.
+# Gamers Assemby Winter Edition 2018 Front
+This repository contain the Gamers Assembly Winter Edition 2018 website frontend.
 
 It's build on fun technologies like:
 - React Nextjs (https://github.com/zeit/next.js)
