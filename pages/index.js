@@ -5,6 +5,7 @@ import Hero from 'components/Hero'
 import HomeNewsList from 'components/HomeNewsList'
 import HomeInfoBlocks from 'components/HomeInfo/index'
 import Meta from 'components/Meta'
+import config from '../config/config'
 import '../styles/styles.scss'
 
 class HomePage extends React.Component {
@@ -13,7 +14,7 @@ class HomePage extends React.Component {
       <Layout name='home-page'>
         <div>
           <Meta title='Accueil' />
-          <Hero title={'Gamers Assembly'} subtitle={'Winter Edition 2018 '} imgUrl={'/static/img/bg-orange-area.jpg'} />
+          <Hero title={config.home.hero.title} subtitle={config.home.hero.subtitle} imgUrl={config.home.hero.background} />
           <HomeInfoBlocks />
           <HomeNewsList />
         </div>

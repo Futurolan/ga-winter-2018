@@ -5,7 +5,6 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 function TicketButton ({ data: { loading, error, node } }) {
-  console.log(node)
   if (error) {
     console.log(error)
     return null

@@ -5,13 +5,12 @@ import PropTypes from 'prop-types'
 import ActiveLink from '../ActiveLink'
 
 function TicketMenu ({ data: { loading, error, node } }) {
-  console.log(node)
   if (error) {
     console.log(error)
     return null
   }
 
-  if (node.url) {
+  if (node && node.url) {
     return <div className='navbar-item ga-ticket-menu is-uppercase has-text-weight-bold'>
       <ActiveLink label='Billeterie' className='has-text-white' path='/billeterie' />
     </div>
