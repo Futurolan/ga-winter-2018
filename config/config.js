@@ -1,13 +1,9 @@
 let config = {
   title: 'Gamers Assembly : Winter Edition 2018',
   description: 'Retrouvez la Gamers Assembly édition Winter très prochainement',
-  image: `${process.env.BASE_URL}/static/img/logo-orange-200x200.png`,
+  image: `${process.env.BASE_URL}/static/img/logo-200x200.png`,
   home: {
-    hero: {
-      title: 'Gamers Assembly',
-      subtitle: 'Winter Edition 2018',
-      background: '/static/img/bg-orange-area.jpg'
-    }
+    banner: '/static/img/bg-winter-v1.png'
   },
   news: {
     title: 'Actualités',
@@ -36,9 +32,9 @@ let config = {
   social: {
     twitter: 'https://twitter.com/GamersAssembly',
     facebook: 'https://www.facebook.com/GamersAssembly',
-    twitch: 'https://www.flickr.com/photos/futurolan',
-    youtube: 'https://twitch.tv/gamers_assembly',
-    flickr: 'https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'
+    twitch: 'https://twitch.tv/gamers_assembly',
+    youtube: 'https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw',
+    flickr: 'https://www.flickr.com/photos/futurolan'
   }
 }
 

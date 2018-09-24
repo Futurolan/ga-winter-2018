@@ -28,7 +28,7 @@ class Header extends React.Component {
           <div className='navbar-brand'>
             <Link href='/'>
               <a>
-                <img src='/static/img/logo-orange-100x100.png' />
+                <img src='/static/img/logo-100x100.png' />
               </a>
             </Link>
             <button className='button navbar-burger is-dark' onClick={this.toggleMenu}>
@@ -40,34 +40,34 @@ class Header extends React.Component {
           <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', { 'is-active': this.state.isOpen })} >
             <div className='navbar-start' />
             <div className='navbar-item'>
-              <ActiveLink label='Actualités' className='has-text-white is-uppercase has-text-weight-bold' path='/news' />
+              <ActiveLink label='Actualités' className='has-text-black is-uppercase has-text-weight-bold' path='/news' />
             </div>
             <TicketMenu />
             <div className='navbar-item is-uppercase has-text-weight-bold'>
-              <ActiveLink label='Tournois' className='has-text-white' path='/tournois' />
+              <ActiveLink label='Tournois' className='has-text-black' path='/tournois' />
             </div>
             <div className='navbar-item is-uppercase has-text-weight-bold'>
-              <ActiveLink label='Infos pratiques' className='has-text-white' path='/infos' />
+              <ActiveLink label='Infos pratiques' className='has-text-black' path='/infos' />
             </div>
             <div className='navbar-item is-uppercase has-text-weight-bold'>
-              <ActiveLink label='Partenaires' className='has-text-white' path='/partenaires' />
+              <ActiveLink label='Partenaires' className='has-text-black' path='/partenaires' />
             </div>
             <div className='navbar-end'>
               <div className='navbar-item'>
                 {config.social && <div className='field is-grouped'>
-                  {config.social.facebook && <a className='control has-text-white' target='_blank' href={config.social.facebook}>
+                  {config.social.facebook && <a className='control has-text-black' target='_blank' href={config.social.facebook}>
                     <i className='fab fa-facebook' />
                   </a>}
-                  {config.social.twitter && <a className='control has-text-white' target='_blank' href={config.social.twitter}>
+                  {config.social.twitter && <a className='control has-text-black' target='_blank' href={config.social.twitter}>
                     <i className='fab fa-twitter' />
                   </a>}
-                  {config.social.flickr && <a className='control has-text-white' target='_blank' href={config.social.flickr}>
+                  {config.social.flickr && <a className='control has-text-black' target='_blank' href={config.social.flickr}>
                     <i className='fab fa-flickr' />
                   </a>}
-                  {config.social.twitch && <a className='control has-text-white' target='_blank' href={config.social.twitch}>
+                  {config.social.twitch && <a className='control has-text-black' target='_blank' href={config.social.twitch}>
                     <i className='fab fa-twitch' />
                   </a>}
-                  {config.social.youtube && <a className='control has-text-white' target='_blank' href={config.social.youtube}>
+                  {config.social.youtube && <a className='control has-text-black' target='_blank' href={config.social.youtube}>
                     <i className='fab fa-youtube' />
                   </a>}
                 </div>}
