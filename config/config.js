@@ -4,10 +4,10 @@ let config = {
   description: 'Retrouvez la Gamers Assembly édition Winter très prochainement',
   metaImage: `${process.env.BASE_URL}/static/img/logo-200x200.png`,
   gaTrackingId: 'UA-7594737-17',
-  // mainPartner: {
-  //   logo: '/static/img/image106px.png',
-  //   url: 'https://bmagic.fr'
-  // },
+  mainPartner: {
+    logo: '/static/img/logoJM106.png',
+    url: 'http://www.jaunay-marigny.fr/'
+  },
   home: {
     banner: '/static/img/bg-winter-v1.png',
     twitterAccount: 'GamersAssembly'
