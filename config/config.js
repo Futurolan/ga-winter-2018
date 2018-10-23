@@ -1,7 +1,7 @@
 let config = {
   title: 'Gamers Assembly : Winter Edition 2018',
   logo: `/static/img/logo-100x100.png`,
-  description: 'Retrouvez la Gamers Assembly édition Winter très prochainement',
+  description: 'L\'édition 2018 de la Gamers Assembly Winter Edition aura lieu du 1er au 2 décembre. À la Salle de l\'Agora - Jaunay-Marigny (86).',
   metaImage: `${process.env.BASE_URL}/static/img/logo-200x200.png`,
   gaTrackingId: 'UA-7594737-17',
   mainPartner: {
