@@ -39,6 +39,7 @@ let config = {
     description: 'Toutes les informations sur cet évènement'
   },
   tickets: {
+    active: false,
     title: 'Billetterie',
     description: 'Achetez vos places pour la Gamers Assembly Winter Edition 2018'
   },
