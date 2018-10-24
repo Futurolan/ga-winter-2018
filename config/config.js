@@ -18,7 +18,7 @@ let config = {
     description: 'Retrouvez toutes les actualités de la Gamers Assembly Winter Edition 2018'
   },
   recruit: {
-    active: true,
+    active: false,
     title: 'Recrutement',
     description: 'Devenir bénévole pour la GAMERS ASSEMBLY 2018, c\'est par ici !!!',
     formUrl: 'https://goo.gl/forms/84pHQfSp50RcuUel2'
@@ -47,7 +47,7 @@ let config = {
     pageId: 6
   },
   press: {
-    active: true,
+    active: false,
     pageId: 7
   },
   legals: {
